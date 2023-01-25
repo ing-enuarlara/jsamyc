@@ -1,6 +1,6 @@
 /* Large desktop */
 @media (max-width: 1200px) {
-    .top-header{
+    .top-header, .contenido__encabezado{
         padding: 0 30px;
     }
 }
@@ -13,6 +13,16 @@
     .info{
         grid-template-columns: repeat(1,1fr);
     }
+    .opcion__searchIco, .opcion__wishlist, .text span{
+        display: none;
+    }
+    .text{
+        display: flex;
+        gap: 10px;
+    }
+    .text__searchIco, .text__menu{
+        display: block;
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -22,6 +32,16 @@
     }
     .info{
         grid-template-columns: repeat(1,1fr);
+    }
+    .opcion__searchIco, .opcion__wishlist, .text span{
+        display: none;
+    }
+    .text{
+        display: flex;
+        gap: 10px;
+    }
+    .text__searchIco, .text__menu{
+        display: block;
     }
 }
 
