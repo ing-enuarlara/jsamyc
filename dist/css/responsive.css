@@ -7,7 +7,7 @@
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 767px) and (max-width: 1024px){
-    .info__hiden{
+    .info__hiden, .nav-bg{
         display: none;
     }
     .info{
@@ -27,7 +27,7 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 766px) {
-    .info__hiden{
+    .info__hiden, .nav-bg{
         display: none;
     }
     .info{
