@@ -253,9 +253,56 @@ a.opcion__card {
     display: grid !important;
     justify-content: left !important;
 }
-.sublink__2{
-    
-}
 .sublink__2 a{
     color: #000 !important;
+}
+.sublink__2 a:hover{
+    color: #7a7a7a !important;
+}
+.menusublink{
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: left !important;
+}
+.menucate, ul.menucate ul {
+    border: 1px solid #eeeeee;
+    padding: 15px !important;
+    opacity: 0;
+    visibility: hidden;
+    width: 240px !important;
+    position: absolute;
+    top: auto;
+    /* left: -17px; */
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #0000004d;
+    transition: all .3s ease-in-out;
+}
+ul.menucate li:first-child {
+    border: 0 none;
+}
+ul.menucate li {
+    border-top: 1px solid #eeeeee;
+    position: relative;
+}
+ul.menucate li a {
+    font-size: 14px;
+    color: #444;
+    font-weight: 400;
+    padding: 8px 5px;
+    /* background-color: #fff; */
+}
+.submenucate{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    justify-content: space-between;
+}
+.submenucate i{
+    padding-top: 5px;
+    text-align: right;
+}
+ul.menucate li ul {
+    top: 10px;
+    left: 100%;
 }
