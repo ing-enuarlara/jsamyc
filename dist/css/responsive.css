@@ -1,47 +1,84 @@
 /* Large desktop */
-@media (max-width: 1200px) {
+@media (min-width: 1024px) {
     .top-header, .contenido__encabezado{
         padding: 0 30px;
     }
-}
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 767px) and (max-width: 1024px){
-    .info__hiden, .nav-bg{
-        display: none;
+    .footer-block__item {
+        width: 25%;
     }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 767px) AND (max-width: 1024px){
     .info{
         grid-template-columns: repeat(1,1fr);
     }
-    .opcion__searchIco, .opcion__wishlist, .text span{
+    .info__hiden, .nav-bg, .opcion__searchIco, .opcion__wishlist, .text span{
         display: none;
     }
     .text{
         display: flex;
         gap: 10px;
     }
-    .text__searchIco, .text__menu{
+    .text__searchIco, .text__menu, #settingsBox .large-up--hide{
         display: block;
+    }
+    .footer-block__item {
+        width: 50%;
     }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 766px) {
-    .info__hiden, .nav-bg{
-        display: none;
-    }
     .info{
         grid-template-columns: repeat(1,1fr);
     }
-    .opcion__searchIco, .opcion__wishlist, .text span{
+    .info__hiden, .nav-bg, .opcion__searchIco, .opcion__wishlist, .text span{
         display: none;
     }
     .text{
         display: flex;
         gap: 10px;
     }
-    .text__searchIco, .text__menu{
+    .text__searchIco, .text__menu, #settingsBox .large-up--hide{
         display: block;
+    }
+    .footer-block__item {
+        width: 100%;
+        padding: 12px 0;
+        margin: 0;
+    }
+    .footer-block__item+.footer-block__item {
+        border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .footer-links .h4 {
+        line-height: 20px;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    .footer-top .h4 i{
+        display: block;
+    }
+    .footer-links .h4+ul {
+        display: none;
+        margin: 10px 0 20px !important;
+    }
+    .footer-links .h4Flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-bottom .flex {
+        flex-direction: column;
+    }
+    .footer-bottom .flex {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .small--text-center {
+        text-align: center!important;
+    }
+    .footer-bottom .paymentCall {
+        margin-bottom: 15px;
+        order: -1;
     }
 }
 
