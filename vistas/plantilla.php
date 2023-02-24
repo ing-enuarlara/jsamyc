@@ -30,6 +30,10 @@
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/e84fa1cf78.js" crossorigin="anonymous"></script>
+    
+    <!-- SLIDER -->
+    <link rel="stylesheet" href="<?=REDIRECT_ROUTE?>dist/css/my-slider.css"/>
+    <script src="<?=REDIRECT_ROUTE?>dist/js/ism-2.2.min.js"></script>
 
 </head>
 
@@ -655,12 +659,12 @@
             <li><a href="deseos">LISTA DE DESEOS</a></li>
         </ul>
     </div>
-    <div class="container page-width">
-        <?php 
-            $ruta= new ControladorPlantilla();
-            $ruta->ctrEnlacesPaginas();
-        ?>
-    </div>
+
+    <?php 
+        $ruta= new ControladorPlantilla();
+        $ruta->ctrEnlacesPaginas();
+    ?>
+    
     <div id="section-footer" class="section-footer">
         <footer class="site-footer style1" role="contentinfo">
             <div class="page-width">
