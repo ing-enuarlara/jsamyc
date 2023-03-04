@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="<?=REDIRECT_ROUTE?>dist/css/my-slider.css"/>
     <script src="<?=REDIRECT_ROUTE?>dist/js/ism-2.2.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -384,7 +386,7 @@
             <li>
                 <a href="#">
                     DESTACADO
-                     <i id="plusD" class="fa-solid fa-plus"></i>
+                    <i id="plusD" class="fa-solid fa-plus"></i>
                 </a>
                 <ul id="menuDes">
                     <li>
@@ -659,12 +661,12 @@
             <li><a href="deseos">LISTA DE DESEOS</a></li>
         </ul>
     </div>
-
-    <?php 
-        $ruta= new ControladorPlantilla();
-        $ruta->ctrEnlacesPaginas();
-    ?>
-    
+    <div class="contenedor">
+        <?php 
+            $ruta= new ControladorPlantilla();
+            $ruta->ctrEnlacesPaginas();
+        ?>
+    </div>
     <div id="section-footer" class="section-footer">
         <footer class="site-footer style1" role="contentinfo">
             <div class="page-width">
@@ -842,15 +844,9 @@
     <!--*****SCRIPT*****-->
     <script src="<?=REDIRECT_ROUTE?>dist/js/funciones.js"></script>
     <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
 </body>
 

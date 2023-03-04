@@ -294,11 +294,11 @@ p.ism-badge a.ism-link:hover {
 }
 
 #my-slider .ism-button {
-    display: block;
-    border-radius: 16px;
-    width: 32px; height: 32px; background-size: 16px 16px; top: 50%; margin-top: -16px;
-    color: #fff; background-color: rgba(255, 255, 255, 0.3);
-    visibility: hidden;
+    display: none;
+    border-radius: 25px;
+    width: 50px; height: 50px; background-size: 16px 16px; top: 50%; margin-top: -25px;
+    color: #fff; background-color: rgba(0, 0, 0, 0.3);
+    display: none;
 }
 
 #my-slider .ism-button-prev {
@@ -312,8 +312,8 @@ p.ism-badge a.ism-link:hover {
 }
 
 #my-slider .ism-pause-button {
-    width: 32px; height: 32px; background-size: 16px 16px; top: 50%; margin-top: -16px; border-radius: 16px; margin-left: -16px;
-    color: #fff; background-color: rgba(255, 255, 255, 0.3); background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVR42u3SsQkAIAxFQeP+O38XsBKxMPfKgCQcjqHe1W6YJFeXVNXJuxd3zO4/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAID0RwuEoAh40yYcSQAAAABJRU5ErkJggg==);
+    width: 50px; height: 50px; background-size: 16px 16px; top: 50%; margin-top: -25px; border-radius: 25px; margin-left: -25px;
+    color: #fff; background-color: rgba(0, 0, 0, 0.3); background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVR42u3SsQkAIAxFQeP+O38XsBKxMPfKgCQcjqHe1W6YJFeXVNXJuxd3zO4/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAID0RwuEoAh40yYcSQAAAABJRU5ErkJggg==);
 }
 
 #my-slider .ism-pause-button.ism-play {
@@ -321,15 +321,11 @@ p.ism-badge a.ism-link:hover {
 }
 
 #my-slider .ism-button:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #my-slider .ism-pause-button:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-#my-slider:hover .ism-button {
-    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #my-slider .ism-radios {
@@ -341,7 +337,7 @@ p.ism-badge a.ism-link:hover {
 #my-slider .ism-radios label {
     width: 20px; height: 20px;
     border-radius: 10px;
-    color: #000; background-color: rgba(0, 0, 0, 0.2); border: 2px solid rgba(255, 255, 255, 0.7);
+    color: #000; background-color: rgba(255, 255, 255, 0.5);
 }
 
 #my-slider .ism-radios li.active label {
@@ -349,7 +345,7 @@ p.ism-badge a.ism-link:hover {
 }
 
 #my-slider .ism-radios label:hover {
-    border: 2px solid rgba(255, 255, 255, 1.0);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -395,7 +391,7 @@ p.ism-badge a.ism-link:hover {
 /* CAPTIONS */
 
 #my-slider .ism-slide-0 .ism-caption-0.ism-caption-anim {
-    -webkit-animation: slidein 0.25s; animation: slidein 0.25s;
+    -webkit-animation: fadein 0.5s; animation: fadein 0.5s;
 }
 
 #my-slider .ism-slide-0 .ism-caption-1.ism-caption-anim {
@@ -407,7 +403,7 @@ p.ism-badge a.ism-link:hover {
 }
 
 #my-slider .ism-slide-1 .ism-caption-0.ism-caption-anim {
-    -webkit-animation: slidein 0.25s; animation: slidein 0.25s;
+    -webkit-animation: fadein 0.5s; animation: fadein 0.5s;
 }
 
 #my-slider .ism-slide-1 .ism-caption-1.ism-caption-anim {
@@ -477,7 +473,7 @@ p.ism-badge a.ism-link:hover {
     font-family: sans-serif;
     position: absolute; top: 10%;
     left: 5%;
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
     color: #fff; background-color: rgba(0, 0, 0, 0.70);
 }

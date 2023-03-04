@@ -6,6 +6,30 @@
     .footer-block__item {
         width: 25%;
     }
+    .sec-ttl {
+        padding-bottom: 35px;
+    }
+    .sec-ttl .h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .sec-ttl p {
+        max-width: 800px;
+        font-size: 15px;
+    }
+    .medium-up--hide {
+        display: none!important;
+    }
+    .grid-products {
+        margin: 0 -15px;
+    }
+    .grid-products{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .grid-view-item.style5 .flatbtn .btn {
+        margin-bottom: 10px;
+    }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 767px) AND (max-width: 1024px){
@@ -24,6 +48,27 @@
     }
     .footer-block__item {
         width: 50%;
+    }
+    .sec-ttl {
+        padding-bottom: 35px;
+    }
+    .sec-ttl .h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .sec-ttl p {
+        max-width: 800px;
+        font-size: 15px;
+    }
+    .medium-up--hide {
+        display: none!important;
+    }
+    .grid-products {
+        margin: 0 -15px;
+    }
+    .grid-products{
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -79,6 +124,12 @@
     .footer-bottom .paymentCall {
         margin-bottom: 15px;
         order: -1;
+    }
+    .contenido__ofertas{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .small--hide {
+        display: none!important;
     }
 }
 
