@@ -156,11 +156,29 @@ header.stickyHeader {
     box-shadow: 0 0 7px #0003;
 }
 .animated {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: both;
 }
 .fadeInDown {
     animation-name: fadeInDown;
+}
+@keyframes fadeInDown{
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .encabezado{
     background-color: var(--negroClaro);
@@ -172,6 +190,9 @@ header.stickyHeader {
     align-items: center;
     color: var(--blanco);
     padding: 0 60px;
+}
+.conten__enca .imgEnca{
+    max-width: 10%;
 }
 .text span{
     font-size: 12px;
@@ -1145,4 +1166,85 @@ a.grid-view-item__link {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.link_instagram {
+    color: #111;
+    text-decoration: none;
+    outline: none;
+}
+.link_instagram:hover {
+    color: #f04343;
+    opacity: .8;
+}
+.home-instagram .followus {
+    text-align: center;
+    padding: 20px 0;
+}
+.home-instagram .followus .btnCard {
+    position: relative;
+    z-index: 555;
+}
+.store-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px;
+}
+.store-info li {
+    text-align: center;
+    flex: 1;
+    padding: 10px 20px;
+}
+.store-info li + li {
+    border-left: 1px dotted #444444;
+}
+.store-info * {
+    color: #111111;
+}
+.store-info li i {
+    color: #e1c10e;
+    font-size: 40px;
+    width: 50px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.store-info h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    letter-spacing: .03em;
+}
+.section-cover {
+    padding: 25px 10px;
+}
+.newsletter-section .sec-ttl * {
+    color: #000000;
+}
+.newsletter-section .newsletter__input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.newsletter__input-group {
+    position: relative;
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+}
+.newsletter__input {
+    border: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+.newsletter__submit {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+.input-group__btn .btnCard {
+    white-space: nowrap;
+}
+.input-group__field, .input-group__btn .btnCard {
+    height: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
