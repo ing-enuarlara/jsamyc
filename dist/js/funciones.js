@@ -1,3 +1,21 @@
+window.onscroll = function() {myFunction()};
+var header = document.getElementById("header");
+var img = document.getElementById("imgEnca");
+var sticky = header.offsetTop;
+function myFunction() {
+
+  if(window.pageYOffset > sticky){
+    header.classList.add("stickyHeader");
+    header.classList.add("fadeInDown");
+    img.classList.add("imgEnca");
+  }else{
+    header.classList.remove("stickyHeader");
+    header.classList.remove("fadeInDown");
+    img.classList.remove("imgEnca");
+  }
+
+}
+
 function mostrar($id){
     document.getElementById($id).style.opacity=1;
     document.getElementById($id).style.visibility='visible';
