@@ -53,7 +53,7 @@
                 <a class="tablink" href="#collection-1552394502461-0">CADENAS<i class="ad ad-angle-down-r" aria-hidden="true"></i></a>
             </h3>
             <div id="collection-1552394502461-0" class="tab-content" style="display: block;">
-                <div id="productSlider-1552394502461-0" class="grid grid-products carousel slick-initialized slick-slider">
+                <div id="" class="grid grid-products carousel slick-initialized slick-slider">
                     <div class="slick-list draggable">
                         <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                             <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
@@ -147,6 +147,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="page-width">
+    <div class="grid contenido__anuncio">
+        <div class="spaces">
+            <a href="">
+                <img class="imgFl" src="https://via.placeholder.com/1230x400">
+            </a>
         </div>
     </div>
 </div>

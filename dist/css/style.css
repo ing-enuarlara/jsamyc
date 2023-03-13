@@ -1248,3 +1248,9 @@ a.grid-view-item__link {
     padding-top: 0;
     padding-bottom: 0;
 }
+.contenido__anuncio{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom: 30px !important;
+    justify-content: center;
+}
