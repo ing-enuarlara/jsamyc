@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    <header class="animated">
+    <header id="header" class="animated">
         <div class="encabezado">
             <div class="contenido__encabezado">
                 <div class="conten__enca aling-left text">
@@ -119,7 +119,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="conten__enca centrar-texto envios"><a href="<?=REDIRECT_ROUTE?>"><img src="https://via.placeholder.com/130x109" /></a></div>
+                <div class="conten__enca centrar-texto envios"><a href="<?=REDIRECT_ROUTE?>"><img id="imgEnca" src="https://via.placeholder.com/130x109" /></a></div>
                 <div class="conten__enca aling-right opciones">
                     <a href="#" class="opciones__link opcion__searchIco" id="viewSearch2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
@@ -661,12 +661,12 @@
             <li><a href="deseos">LISTA DE DESEOS</a></li>
         </ul>
     </div>
-    <div class="contenedor">
+    <main class="contenedor" id="contenedor">
         <?php 
             $ruta= new ControladorPlantilla();
             $ruta->ctrEnlacesPaginas();
         ?>
-    </div>
+    </main>
     <div id="section-footer" class="section-footer">
         <footer class="site-footer style1" role="contentinfo">
             <div class="page-width">
