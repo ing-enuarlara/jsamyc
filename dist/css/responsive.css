@@ -143,6 +143,9 @@
     .small--hide {
         display: none!important;
     }
+    .sectio__store-info{
+        display: none!important;
+    }
 }
 
 /* Landscape phones and down */

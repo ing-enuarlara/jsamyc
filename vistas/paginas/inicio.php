@@ -208,7 +208,7 @@
         <a href="Ver en Instagram" title="Ver en Instagram" target="_blank" class="btnCard btnCard__primary">Ver en Instagram</a>
     </div>
 </div>
-<div class="page-width wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+<div class="page-width wow fadeIn sectio__store-info" style="visibility: visible; animation-name: fadeIn;">
     <ul class="store-info style1">
         <li class="item">
             <a class="centrar-texto" href="#">
