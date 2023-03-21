@@ -95,3 +95,9 @@ document.getElementById("Usu").onclick=function(){
 document.getElementById("Leg").onclick=function(){
     plusMinus("plusLeg","menLeg");
 }
+document.getElementById("openFilter").onclick=function(){
+    activar("filterbar");
+}
+document.getElementById("closeFilter").onclick=function(){
+    activar("filterbar");
+}

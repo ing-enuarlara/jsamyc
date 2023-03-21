@@ -49,7 +49,7 @@
         display: flex;
         gap: 10px;
     }
-    .text__searchIco, .text__menu, #settingsBox .large-up--hide{
+    .text__searchIco, .text__menu, #openFilter, #closeFilter, #settingsBox .large-up--hide{
         display: block;
     }
     .footer-block__item {
@@ -82,6 +82,29 @@
     .input-group__field, .input-group__btn .btnCard {
         height: 40px;
     }
+    .filtros{
+        width: 0;
+    }
+    .contenido__store--tienta{
+        width: 100%;
+    }
+    .filterbar {
+        width: 280px;
+        height: 100%;
+        overflow: auto;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 444;
+        background-color: #fff;
+        transform: translate(-290px);
+        box-shadow: 0 0 10px #0000001a;
+    }
+    .filterbar.active {
+        left: 0;
+        transform: translate(0);
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -96,7 +119,7 @@
         display: flex;
         gap: 10px;
     }
-    .text__searchIco, .text__menu, #settingsBox .large-up--hide{
+    .text__searchIco, .text__menu, #openFilter, #closeFilter, #settingsBox .large-up--hide{
         display: block;
     }
     .footer-block__item {
@@ -145,6 +168,29 @@
     }
     .sectio__store-info{
         display: none!important;
+    }
+    .filtros{
+        width: 0;
+    }
+    .contenido__store--tienta{
+        width: 100%;
+    }
+    .filterbar {
+        width: 280px;
+        height: 100%;
+        overflow: auto;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 444;
+        background-color: #fff;
+        transform: translate(-290px);
+        box-shadow: 0 0 10px #0000001a;
+    }
+    .filterbar.active {
+        left: 0;
+        transform: translate(0);
     }
 }
 

@@ -769,7 +769,7 @@ ul.menucate li ul {
     color: #222;
     text-decoration: underline;
 }
-#settingsBox .large-up--hide{
+#openFilter, #closeFilter, #settingsBox .large-up--hide{
     display: none;
 }
 .site-footer {
@@ -785,6 +785,11 @@ ul.menucate li ul {
     padding-left: 15px;
     padding-right: 15px;
     max-width: 1240px;
+}
+.page-width:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .footer-block {
     display: flex;
@@ -1253,4 +1258,195 @@ a.grid-view-item__link {
     grid-template-columns: repeat(1,1fr);
     margin-bottom: 30px !important;
     justify-content: center;
+}
+.bredcrumbWrap {
+    background: #f9f9f9;
+    margin: 0 0 30px;
+}
+.breadcrumbs {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.breadcrumbs a:first-child, .breadcrumbs span:first-child {
+    padding-left: 0;
+}
+.breadcrumbs a, .breadcrumbs span {
+    text-transform: none;
+    color: #111;
+    display: inline-block;
+    padding: 0 3px 0 0;
+    margin-right: 3px;
+    font-size: 12px;
+}
+.contenido__store{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.filtros{
+    width: 30%;
+}
+.contenido__store--tienta{
+    width: 70%;
+}
+.title-bold {
+    font-weight: 700;
+}
+.sidebar {
+    width: 300px;
+    transition: all .3s ease-in-out;
+    order: -1;
+    padding: 0 30px 0 15px;
+}
+.closeFilter {
+    z-index: 333;
+    color: #444;
+    font-size: 17px;
+    line-height: 34px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.flForm .sidebar_widget ul li{
+    padding-left: 20px;
+}
+.sidebar .sidebar_widget {
+    margin-bottom: 30px;
+}
+.sidebar .widget-title {
+    color: #111;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    position: relative;
+}
+.count-bubble {
+    display: none;
+}
+.slider-container-price {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.slider-container-price input{
+    margin: 0 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(107, 108, 109);
+    outline: none;
+}
+.flForm .sidebar_widget ul li a{
+    color: #000;
+}
+ul.sidebar_cate .grid__item {
+    float: none;
+    width: 100%;
+    margin: 0;
+}
+ul.sidebar_cate li {
+    padding: 4px 0;
+}
+ul.sidebar_cate a {
+    color: #000;
+}
+ul.sidebar_cate ul {
+    margin: 0 0 0 15px !important;
+}
+.collection-title {
+    color: #111111;
+    margin-bottom: 10px!important;
+}
+.collection-title {
+    font-size: 20px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.filters-toolbar {
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.btnCard-filter {
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 2px 12px;
+    line-height: normal;
+    height: auto;
+    font-size: 12px;
+    letter-spacing: 0;
+    margin: 0 15px 0 0;
+}
+.filters-toolbar .change-view {
+    font-size: 18px;
+    line-height: 1;
+    background: none;
+    border: 0;
+    padding: 0 3px;
+}
+.filters-toolbar .change-view svg {
+    stroke: #6b6969;
+}
+.filters-toolbar .change-view svg:active{
+    stroke: #000000 !important;
+}
+.filters-toolbar .change-view svg:hover {
+    stroke: #000000;
+}
+.flbarCount {
+    font-size: 12px;
+    margin: 0 auto;
+}
+.label--hidden {
+    position: absolute;
+    height: 0;
+    width: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+}
+.filters-toolbar select {
+    font-size: 12px;
+    height: auto;
+    max-width: 100%;
+    min-width: inherit;
+    margin: 0;
+    padding: 5px 25px 5px 5px;
+    border: 0 none;
+}
+select {
+    background: #ffffff no-repeat right 10px center;
+    cursor: pointer;
+    padding-right: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+option {
+    color: #111;
+    background-color: #fff;
+}
+.crFilters {
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    display: flex;
+}
+.crFilters .actFilter:only-child {
+    display: none;
+}
+.crFilters .actFilter {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 3px 0 0;
+    padding: 3px 6px;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
 }

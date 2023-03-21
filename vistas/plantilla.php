@@ -1,13 +1,5 @@
 <?php
     const REDIRECT_ROUTE = 'http://localhost/ing-enuarlara.co/tienda/';
-    
-    if(isset($_GET['pagina'])){
-        $pagina= explode("/",$_GET['pagina']);
-        $cat="";
-        if(!empty($pagina[1])){
-            $cat=$pagina[1];
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -34,6 +26,10 @@
     <!-- SLIDER -->
     <link rel="stylesheet" href="<?=REDIRECT_ROUTE?>dist/css/my-slider.css"/>
     <script src="<?=REDIRECT_ROUTE?>dist/js/ism-2.2.min.js"></script>
+    
+    <?php 
+        include("includes/funciones-js.php");
+    ?>
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 
@@ -663,6 +659,7 @@
     </div>
     <main class="contenedor" id="contenedor">
         <?php 
+            include("includes/navegacion.php");
             $ruta= new ControladorPlantilla();
             $ruta->ctrEnlacesPaginas();
         ?>
