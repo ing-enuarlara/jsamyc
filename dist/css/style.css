@@ -1143,15 +1143,38 @@ a.grid-view-item__link {
     margin-top: 10px;
     font-size: 0px;
 }
-.grid-view-item.style5 .flatbtn {
-    margin: 10px 0;
+.flatbtn {
+    width: 100%;
+    display: block;
+    font-size: 0px;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    z-index: 444;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-out;
 }
-.grid-view-item.style5 .flatbtn .btn {
+.grid-view-item:hover .flatbtn {
+    bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.flatbtn .btn {
     border: 0;
-    color: #fff;
-    padding: 8px 25px;
+    color: var(--blanco);
+    padding: 5px 8px;
+    margin: 0 3px;
     border-radius: 3px;
-    background-color: #444;
+    background-color: var(--negroClaro);
+}
+.flatbtn svg{
+    stroke: var(--blanco);
+    width: 20px;
+    height: 20px;
+}
+.flatbtn .btn_tienda:hover{
+    background-color: var(--gris);
 }
 .hide {
     display: none!important;
@@ -1284,10 +1307,10 @@ a.grid-view-item__link {
     gap: 5px;
 }
 .filtros{
-    width: 30%;
+    width: 20%;
 }
 .contenido__store--tienta{
-    width: 70%;
+    width: 80%;
 }
 .title-bold {
     font-weight: 700;
@@ -1336,8 +1359,8 @@ a.grid-view-item__link {
     gap: 10px;
 }
 .slider-container-price input{
-    margin: 0 20px;
-    padding-left: 20px;
+    margin: 0 10px;
+    padding-left: 10px;
     border-radius: 10px;
     border: 1px solid rgb(107, 108, 109);
     outline: none;
@@ -1449,4 +1472,10 @@ option {
     background: #000;
     color: #fff;
     font-size: 11px;
+}
+.contenedor_producto_tienda{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    place-items: center;
 }

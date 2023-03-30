@@ -41,7 +41,7 @@
                         <div class="widget-title">
                             <span class="fl f-jcsb f-aic">Precio<span class="count-bubble"></span></span>
                         </div>
-                        <div class="slider-container-price theme-green" style="width: 250px;">
+                        <div class="slider-container-price theme-green" style="width: 200px;">
                             <input type="text" onchange="filtros(this,3)" value="<?=$precioMin?>" placeholder="$ 0">
                             <input type="text" onchange="filtros(this,4)" value="<?=$precioMax?>" placeholder="$ 30.996.000">
                         </div>
@@ -249,6 +249,196 @@
                 <?php
                 }
                 ?>
+            </div>
+        </div>
+        <div class="contenedor_producto_tienda">
+            <div id="" class="grid grid-products carousel slick-initialized slick-slider">
+                <div class="slick-list draggable">
+                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                        <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
+                            <div class="grid-view_image">
+                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                    <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
+                                        <picture style="display: block;">
+                                            <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
+                                        </picture>
+                                        <div class="flatbtn">
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path
+                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                                </svg>
+                                            </a>
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <circle cx="6" cy="19" r="2" />
+                                                    <circle cx="17" cy="19" r="2" />
+                                                    <path d="M17 17h-11v-14h-2" />
+                                                    <path d="M6 5l14 1l-1 7h-13" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="details">
+                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <div class="grid-view-item__meta">
+                                    <!-- Show min to max price -->
+                                    <span class="visually-hidden">Precio habitual</span>
+                                    <span class="product-price__price">$520.960</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="" class="grid grid-products carousel slick-initialized slick-slider">
+                <div class="slick-list draggable">
+                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                        <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
+                            <div class="grid-view_image">
+                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                    <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
+                                        <picture style="display: block;">
+                                            <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
+                                        </picture>
+                                        <div class="flatbtn">
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path
+                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                                </svg>
+                                            </a>
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <circle cx="6" cy="19" r="2" />
+                                                    <circle cx="17" cy="19" r="2" />
+                                                    <path d="M17 17h-11v-14h-2" />
+                                                    <path d="M6 5l14 1l-1 7h-13" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="details">
+                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <div class="grid-view-item__meta">
+                                    <!-- Show min to max price -->
+                                    <span class="visually-hidden">Precio habitual</span>
+                                    <span class="product-price__price">$520.960</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="" class="grid grid-products carousel slick-initialized slick-slider">
+                <div class="slick-list draggable">
+                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                        <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
+                            <div class="grid-view_image">
+                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                    <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
+                                        <picture style="display: block;">
+                                            <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
+                                        </picture>
+                                        <div class="flatbtn">
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path
+                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                                </svg>
+                                            </a>
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <circle cx="6" cy="19" r="2" />
+                                                    <circle cx="17" cy="19" r="2" />
+                                                    <path d="M17 17h-11v-14h-2" />
+                                                    <path d="M6 5l14 1l-1 7h-13" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="details">
+                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <div class="grid-view-item__meta">
+                                    <!-- Show min to max price -->
+                                    <span class="visually-hidden">Precio habitual</span>
+                                    <span class="product-price__price">$520.960</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="" class="grid grid-products carousel slick-initialized slick-slider">
+                <div class="slick-list draggable">
+                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                        <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
+                            <div class="grid-view_image">
+                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                    <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
+                                        <picture style="display: block;">
+                                            <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
+                                        </picture>
+                                        <div class="flatbtn">
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path
+                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                                </svg>
+                                            </a>
+                                            <a class="btn btn_tienda add-to-cart" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <circle cx="6" cy="19" r="2" />
+                                                    <circle cx="17" cy="19" r="2" />
+                                                    <path d="M17 17h-11v-14h-2" />
+                                                    <path d="M6 5l14 1l-1 7h-13" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="details">
+                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <div class="grid-view-item__meta">
+                                    <!-- Show min to max price -->
+                                    <span class="visually-hidden">Precio habitual</span>
+                                    <span class="product-price__price">$520.960</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -105,6 +105,10 @@
         left: 0;
         transform: translate(0);
     }
+    .contenedor_producto_tienda{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -192,7 +196,16 @@
         left: 0;
         transform: translate(0);
     }
+    .contenedor_producto_tienda{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
 /* Landscape phones and down */
-@media (min-width: 600px) {}
+@media (max-width: 450px) {
+    .contenedor_producto_tienda{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+}
