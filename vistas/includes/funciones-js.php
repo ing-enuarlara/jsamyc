@@ -32,7 +32,7 @@
     }
 ?>
 <script type="text/javascript">
-    url='http://localhost/ing-enuarlara.co/tienda/';
+    url='http://localhost/ing-enuarlara.co/jsamyc/';
     function filtros(datos,op){
         pagina= "<?=$nombrePagina;?>";
         view= "<?=$view;?>";
