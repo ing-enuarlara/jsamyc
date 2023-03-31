@@ -1143,7 +1143,7 @@ a.grid-view-item__link {
     margin-top: 10px;
     font-size: 0px;
 }
-.flatbtn {
+.button-set {
     width: 100%;
     display: block;
     font-size: 0px;
@@ -1155,12 +1155,12 @@ a.grid-view-item__link {
     visibility: hidden;
     transition: all .3s ease-out;
 }
-.grid-view-item:hover .flatbtn {
+.grid-view-item:hover .button-set {
     bottom: 10px;
     opacity: 1;
     visibility: visible;
 }
-.flatbtn .btn {
+.button-set .btn {
     border: 0;
     color: var(--blanco);
     padding: 5px 8px;
@@ -1168,12 +1168,12 @@ a.grid-view-item__link {
     border-radius: 3px;
     background-color: var(--negroClaro);
 }
-.flatbtn svg{
+.button-set svg{
     stroke: var(--blanco);
     width: 20px;
     height: 20px;
 }
-.flatbtn .btn_tienda:hover{
+.button-set .btn_tienda:hover{
     background-color: var(--gris);
 }
 .hide {
@@ -1445,7 +1445,7 @@ ul.sidebar_cate ul {
     border: 0 none;
 }
 select {
-    background: #ffffff no-repeat right 10px center;
+    background: #ffffff url(../img/arrow-select.webp) no-repeat right 10px center;
     cursor: pointer;
     padding-right: 30px;
     -webkit-appearance: none;
@@ -1476,6 +1476,12 @@ option {
 .contenedor_producto_tienda{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    place-items: center;
+}
+.contenedor_producto{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: .5rem;
     place-items: center;
 }
