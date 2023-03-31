@@ -65,7 +65,7 @@
                     <div class="widget-content">
                         <ul class="sidebar_cate">
                             <li class="grid__item lvl-1 ">
-                                <a href="<?=REDIRECT_ROUTE?>tienda/cadenas" class="site-nav lvl-1">Cadenas</a>
+                                <a href="<?=RUTA?>tienda/cadenas" class="site-nav lvl-1">Cadenas</a>
                                 <ul class="subLinks">
                                     <li class="lvl-2">
                                         <a href="/collections/cadenas-40cm" class="site-nav lvl-2">Cadenas 40cm</a>
@@ -225,27 +225,27 @@
             </div>
             <div class="active-facets crFilters fl f-wrap">
                 <?php if($filtro==1){ ?>
-                    <a href="<?=REDIRECT_ROUTE.$_GET['pagina']?>" class="actFilter js-facet-remove">Limpiar todo</a>
+                    <a href="<?=RUTA.$_GET['pagina']?>" class="actFilter js-facet-remove">Limpiar todo</a>
                 <?php
                 }
                 if(!empty($precioMin)){
                 ?>
-                    <a class="actFilter js-facet-remove" href="<?=REDIRECT_ROUTE?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMax=<?=$precioMax?>&oroItaly=<?=$oroItaly?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>">Minimo: $<?=$precioMin?> <i class="fa-solid fa-xmark"></i></a>
+                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMax=<?=$precioMax?>&oroItaly=<?=$oroItaly?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>">Minimo: $<?=$precioMin?> <i class="fa-solid fa-xmark"></i></a>
                 <?php
                 }
                 if(!empty($precioMax)){
                 ?>
-                    <a class="actFilter js-facet-remove" href="<?=REDIRECT_ROUTE?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&oroItaly=<?=$oroItaly?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>">Maximo: $<?=$precioMax?> <i class="fa-solid fa-xmark"></i></a>
+                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&oroItaly=<?=$oroItaly?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>">Maximo: $<?=$precioMax?> <i class="fa-solid fa-xmark"></i></a>
                 <?php
                 }
                 if(!empty($oroItaly)){
                 ?>
-                    <a class="actFilter js-facet-remove" href="<?=REDIRECT_ROUTE?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&precioMax=<?=$precioMax?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>"><?=$oroItaly?> <i class="fa-solid fa-xmark"></i></a>
+                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&precioMax=<?=$precioMax?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>"><?=$oroItaly?> <i class="fa-solid fa-xmark"></i></a>
                 <?php
                 }
                 if(!empty($oroNacional)){
                 ?>
-                    <a class="actFilter js-facet-remove" href="<?=REDIRECT_ROUTE?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&precioMax=<?=$precioMax?>&oroItaly=<?=$oroItaly?>&ordenar=<?=$ordenar?>"><?=$oroNacional?> <i class="fa-solid fa-xmark"></i></a>
+                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtro=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&precioMax=<?=$precioMax?>&oroItaly=<?=$oroItaly?>&ordenar=<?=$ordenar?>"><?=$oroNacional?> <i class="fa-solid fa-xmark"></i></a>
                 <?php
                 }
                 ?>

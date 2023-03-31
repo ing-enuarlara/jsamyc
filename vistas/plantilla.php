@@ -1,5 +1,5 @@
 <?php
-    const REDIRECT_ROUTE = 'http://localhost/ing-enuarlara.co/tienda/';
+    const RUTA = 'http://localhost/ing-enuarlara.co/jsamyc/';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,11 +10,11 @@
     <title>Nombre Tienda || Descripción</title>
 
     <!-- NORMALIZE -->
-    <link rel="stylesheet" type="text/css" href="<?=REDIRECT_ROUTE?>dist/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/normalize.css">
 
     <!-- STYLE -->
-    <link rel="stylesheet" type="text/css" href="<?=REDIRECT_ROUTE?>dist/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?=REDIRECT_ROUTE?>dist/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/responsive.css">
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,8 +24,8 @@
     <script src="https://kit.fontawesome.com/e84fa1cf78.js" crossorigin="anonymous"></script>
     
     <!-- SLIDER -->
-    <link rel="stylesheet" href="<?=REDIRECT_ROUTE?>dist/css/my-slider.css"/>
-    <script src="<?=REDIRECT_ROUTE?>dist/js/ism-2.2.min.js"></script>
+    <link rel="stylesheet" href="<?=RUTA?>dist/css/my-slider.css"/>
+    <script src="<?=RUTA?>dist/js/ism-2.2.min.js"></script>
     
     <?php 
         include("includes/funciones-js.php");
@@ -115,7 +115,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="conten__enca centrar-texto envios"><a href="<?=REDIRECT_ROUTE?>"><img id="imgEnca" src="https://via.placeholder.com/130x109" /></a></div>
+                <div class="conten__enca centrar-texto envios"><a href="<?=RUTA?>"><img id="imgEnca" src="https://via.placeholder.com/130x109" /></a></div>
                 <div class="conten__enca aling-right opciones">
                     <a href="#" class="opciones__link opcion__searchIco" id="viewSearch2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
@@ -176,10 +176,10 @@
         <div class="nav-bg centrar-texto">
             <ul id="siteNav">
                 <li class="nav_items">
-                    <a href="<?=REDIRECT_ROUTE?>">INICIO</a>
+                    <a href="<?=RUTA?>">INICIO</a>
                 </li>
                 <li class="nav_items">
-                    <a href="<?=REDIRECT_ROUTE?>tienda">TIENDA</a>
+                    <a href="<?=RUTA?>tienda">TIENDA</a>
                 </li>
                 <li class="nav_items" onmousemove="mostrar('megame')" onmouseout="ocultar('megame')">
                     <a href="#">
@@ -192,7 +192,7 @@
                                 <a href="#" class="grid__link"><b>DESTACADAS</b></a>
                                 <ul class="sublink">
                                     <li class="sublink__2">
-                                        <a href="<?=REDIRECT_ROUTE?>tienda/cadenas">Cadenas</a>
+                                        <a href="<?=RUTA?>tienda/cadenas">Cadenas</a>
                                     </li>
                                     <li class="sublink__2">
                                         <a href="#">Anillos</a>
@@ -369,7 +369,7 @@
                     </ul>
                 </li>
                 <li class="nav_items">
-                    <a href="<?=REDIRECT_ROUTE?>contacto">CONTACTO</a>
+                    <a href="<?=RUTA?>contacto">CONTACTO</a>
                 </li>
             </ul>
         </div>
@@ -377,8 +377,8 @@
     <div id="mobile__nav" class="mobile__nav">
         <div id="closemmn" class="closemmn"><i class="fa-solid fa-xmark"></i></div>
         <ul id="mobileNav" class="mobil__navMnu">
-            <li><a href="<?=REDIRECT_ROUTE?>">INICIO</a></li>
-            <li><a href="<?=REDIRECT_ROUTE?>tienda">TIENDA</a></li>
+            <li><a href="<?=RUTA?>">INICIO</a></li>
+            <li><a href="<?=RUTA?>tienda">TIENDA</a></li>
             <li>
                 <a href="#">
                     DESTACADO
@@ -756,7 +756,7 @@
                     </div>
                     <div class="paymentCall aling-right small--text-center">
                         <p class="footer-img">
-                            <img class="autoHt lazyloaded" data-src="<?=REDIRECT_ROUTE?>dist/img/logos-pagos_646c6440-0b3c-4818-8241-f06bb4ee76d8.png" alt="" width="450" height="0.0" src="<?=REDIRECT_ROUTE?>dist/img/logos-pagos_646c6440-0b3c-4818-8241-f06bb4ee76d8.png">
+                            <img class="autoHt lazyloaded" data-src="<?=RUTA?>dist/img/logos-pagos_646c6440-0b3c-4818-8241-f06bb4ee76d8.png" alt="" width="450" height="0.0" src="<?=RUTA?>dist/img/logos-pagos_646c6440-0b3c-4818-8241-f06bb4ee76d8.png">
                         </p>
                     </div>
                 </div>
@@ -839,7 +839,7 @@
     </div>
 
     <!--*****SCRIPT*****-->
-    <script src="<?=REDIRECT_ROUTE?>dist/js/funciones.js"></script>
+    <script src="<?=RUTA?>dist/js/funciones.js"></script>
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

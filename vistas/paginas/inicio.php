@@ -2,7 +2,7 @@
     <ol>
         <li>
             <a href="" target="_self">
-                <img src="<?= REDIRECT_ROUTE ?>dist/img/slides/city-690332_1280.jpg">
+                <img src="<?= RUTA ?>dist/img/slides/city-690332_1280.jpg">
                 <!-- <div class="ism-caption ism-caption-0">My slide caption text</div> -->
             </a>
         </li>

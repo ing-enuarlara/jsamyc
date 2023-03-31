@@ -8,7 +8,7 @@
 ?>
 <div class="bredcrumbWrap">
     <nav class="page-width breadcrumbs" role="navigation" aria-label="breadcrumbs">
-        <a href="<?=REDIRECT_ROUTE?>" title="Volver a la página de inicio">Inicio</a>
+        <a href="<?=RUTA?>" title="Volver a la página de inicio">Inicio</a>
         <span aria-hidden="true" class="symbol">|</span>
         <span class="title-bold"><?=$nombrePagina?></span>
     </nav>
