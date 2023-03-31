@@ -369,7 +369,7 @@
                     </ul>
                 </li>
                 <li class="nav_items">
-                    <a href="<?=REDIRECT_ROUTE?>contact">CONTACTO</a>
+                    <a href="<?=REDIRECT_ROUTE?>contacto">CONTACTO</a>
                 </li>
             </ul>
         </div>
@@ -649,7 +649,7 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="contact">CONTACTO</a></li>
+            <li><a href="contacto">CONTACTO</a></li>
             <li></li>
             <li></li>
             <li></li>
