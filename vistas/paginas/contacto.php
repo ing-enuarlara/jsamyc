@@ -1,1 +1,6 @@
-<h4>CONTACTO</h4>
+<?php
+    $nombrePagina=nombrePaginas();
+?>
+<div class="page-width contenido__contacto">
+        <h1 class="collection-title centrar-item"><?=$nombrePagina?></h1>
+</div>
