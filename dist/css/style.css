@@ -1301,7 +1301,7 @@ a.grid-view-item__link {
     margin-right: 3px;
     font-size: 12px;
 }
-.contenido__store{
+.contenido__store, .contenido__contacto{
     display: flex;
     width: 100%;
     gap: 5px;

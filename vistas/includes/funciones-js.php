@@ -1,11 +1,6 @@
 <?php
-    if(isset($_GET['pagina'])){
-        $pagina= explode("/",$_GET['pagina']);
-        $nombrePagina=$pagina[0];
-        if(!empty($pagina[1])){
-            $nombrePagina=$pagina[0]."/".$pagina[1];
-        }
-    }
+    $paginaUrl=paginaUrl();
+
     $view="";
     if(!empty($_GET['view'])){
         $view=$_GET['view'];
@@ -34,7 +29,7 @@
 <script type="text/javascript">
     url='http://localhost/ing-enuarlara.co/jsamyc/';
     function filtros(datos,op){
-        pagina= "<?=$nombrePagina;?>";
+        pagina= "<?=$paginaUrl;?>";
         view= "<?=$view;?>";
         precioMin= "<?=$min?>";
         precioMax= "<?=$max?>";

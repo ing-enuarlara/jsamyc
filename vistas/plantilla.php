@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="<?=RUTA?>dist/css/my-slider.css"/>
     <script src="<?=RUTA?>dist/js/ism-2.2.min.js"></script>
     
-    <?php 
+    <?php
+        include("includes/funciones.php");
         include("includes/funciones-js.php");
     ?>
 

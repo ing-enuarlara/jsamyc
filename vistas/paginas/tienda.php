@@ -1,11 +1,6 @@
 <?php
-    if(isset($_GET['pagina'])){
-        $pagina= explode("/",$_GET['pagina']);
-        $nombrePagina=ucfirst($pagina[0]);
-        if(!empty($pagina[1])){
-            $nombrePagina=ucfirst($pagina[1]);
-        }
-    }
+    $nombrePagina=nombrePaginas();
+    
     $filtro="";
     if(!empty($_GET['filtro'])){
         $filtro=$_GET['filtro'];
