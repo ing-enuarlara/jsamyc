@@ -51,6 +51,42 @@ ul{
     padding: 0 !important;
     margin: 0 !important;
 }
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+label[for] {
+    cursor: pointer;
+}
+input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+[role=button], a, button, input, label, select, textarea {
+    touch-action: manipulation;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+}
+body, button, input, select, textarea {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+input, textarea, select {
+    color: #111 !important;
+    font-size: 13px !important;
+    font-family: Roboto !important;
+    margin-bottom: 15px;
+    max-width: 100% !important;
+    line-height: 1.2 !important;
+    padding: 8px 15px !important;
+    border: 1px solid #dddddd !important;
+    background-color: #fff !important;
+}
 /***************Utilidades*****************/
 .no-margin{
     margin: 0;
@@ -59,7 +95,7 @@ ul{
     padding: 0;
 }
 .centrar-texto{
-    text-align: center;
+    text-align: center !important;
 }
 .aling-right{
     text-align: right;
@@ -79,6 +115,9 @@ ul{
 }
 .dbi {
     display: inline-block;
+}
+.hide {
+    display: none!important;
 }
 /***************Header*****************/
 .top-header-wrapper{
@@ -573,8 +612,8 @@ ul.menucate li ul {
     vertical-align: middle;
     cursor: pointer;
     border: 2px solid #131313;
-    background-color: #131313;
-    color: #fff;
+    background-color: #131313 !important;
+    color: #fff !important;
     text-transform: uppercase;
     line-height: 1;
     transition: all .3s ease-in-out;
@@ -592,9 +631,9 @@ ul.menucate li ul {
     border-radius: 0;
 }
 .btnCard__primary:hover {
-    color: #000;
-    background-color: #0000;
-    border-color: #030505;
+    color: #000 !important;
+    background-color: #0000 !important;
+    border-color: #030505 !important;
     opacity: 1;
 }
 .btnCard__secondary {
@@ -1176,9 +1215,6 @@ a.grid-view-item__link {
 .button-set .btn_tienda:hover{
     background-color: var(--gris);
 }
-.hide {
-    display: none!important;
-}
 .shopWrapper {
     width: 100%;
     height: 100%;
@@ -1301,7 +1337,7 @@ a.grid-view-item__link {
     margin-right: 3px;
     font-size: 12px;
 }
-.contenido__store, .contenido__contacto{
+.contenido__store{
     display: flex;
     width: 100%;
     gap: 5px;
@@ -1385,8 +1421,6 @@ ul.sidebar_cate ul {
 .collection-title {
     color: #111111;
     margin-bottom: 10px!important;
-}
-.collection-title {
     font-size: 20px !important;
     text-transform: uppercase;
     font-weight: 700;
@@ -1484,4 +1518,53 @@ option {
     grid-template-columns: repeat(5, 1fr);
     gap: .5rem;
     place-items: center;
+}
+/*****************************CONTACTO*******************************/
+.page-title {
+    letter-spacing: normal;
+    font-weight: 400;
+    font-size: 18px !important;
+    position: relative;
+    margin: 0 0 30px;
+    text-align: center;
+}
+.contenido__contacto h1, .contenido__registro h1, .contenido__acceso h1{
+    width: 100%;
+}
+.contenido_formulario {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.form-vertical input, .form-vertical select, .form-vertical textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contenido_formulario p {
+    margin-bottom: 25px;
+}
+.form-vertical [type=checkbox], .form-vertical [type=radio] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+}
+input.custCheck {
+    color: #fff !important;
+    background-color: #444 !important;
+}
+.contenido_formulario .custCheck {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border: 1px solid rgba(68,68,68,.3) !important;
+    background: #fff;
+    vertical-align: middle;
+    font-size: 11px !important;
+    font-weight: 400;
+    line-height: 16px !important;
+}
+.form-vertical .btnCard, .form-vertical [type=submit] {
+    display: inline-block;
+    width: auto;
 }

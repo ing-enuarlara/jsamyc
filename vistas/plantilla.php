@@ -143,10 +143,10 @@
                             </p>
                             <p class="centrar-texto">
                                 ¿Nuevo usuario?
-                                <a href="#" class="ctLink">Regístrate ahora</a>
+                                <a href="<?=RUTA?>registrate" class="ctLink">Regístrate ahora</a>
                             </p>
                             <p class="centrar-texto large-up--hide">
-                                <a href="deseos" class="ctLink" title="Lista de deseos">Lista de deseos</a>
+                                <a href="<?=RUTA?>deseos" class="ctLink" title="Lista de deseos">Lista de deseos</a>
                             </p>
                         </div>
                     </div>
@@ -250,7 +250,7 @@
                     </a>
                     <ul class="menucate menusublink" id="menucate1">
                         <li class="" onmousemove="mostrar('menucate2')" onmouseout="ocultar('menucate2')">
-                            <a href="#" class="submenucate">
+                            <a href="<?=RUTA?>tienda/cadenas" class="submenucate">
                                 Cadenas
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
@@ -393,7 +393,7 @@
                         </a>
                         <ul id="menuDest">
                             <li>
-                                <a href="#">
+                                <a href="<?=RUTA?>tienda/cadenas">
                                     CADENAS
                                 </a>
                             </li>
@@ -650,12 +650,12 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="contacto">CONTACTO</a></li>
+            <li><a href="<?=RUTA?>contacto">CONTACTO</a></li>
             <li></li>
             <li></li>
             <li></li>
-            <li><a href="acceso">ACCESO</a></li>
-            <li><a href="deseos">LISTA DE DESEOS</a></li>
+            <li><a href="<?=RUTA?>acceso">ACCESO</a></li>
+            <li><a href="<?=RUTA?>deseos">LISTA DE DESEOS</a></li>
         </ul>
     </div>
     <main class="contenedor" id="contenedor">
@@ -722,7 +722,7 @@
                     <div id="nav_menu-1561381006670" class="footer-block__item medium-up--one-quarter footer-links">
                         <h4 class="h4 h4Flex" id="Cat">Categorías <i id="plusCat" class="fa-solid fa-plus"></i></h4>
                         <ul id="menCat">
-                            <li><a href="/collections/cadenas">Cadenas</a></li>
+                            <li><a href="<?=RUTA?>tienda/cadenas">Cadenas</a></li>
                             <li><a href="/collections/dijes">Dijes</a></li>
                             <li><a href="/collections/aretes">Aretes</a></li>
                             <li><a href="/collections/pulseras">Pulseras</a></li>
@@ -736,7 +736,7 @@
                             <li><a href="https://elitejoyeria.com.co/account/login">Iniciar Sesión</a></li>
                             <li><a href="https://elitejoyeria.com.co/account">Mi Cuenta</a></li>
                             <li><a href="https://elitejoyeria.com.co/cart">Carrito de Compras</a></li>
-                            <li><a href="/pages/lista-de-deseos">Lista de Deseos</a></li>
+                            <li><a href="<?=RUTA?>deseos">Lista de Deseos</a></li>
                         </ul>
                     </div>
                     <div id="nav_menu-1561381058776" class="footer-block__item medium-up--one-fifth footer-links">
