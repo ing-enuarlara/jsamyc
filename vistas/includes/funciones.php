@@ -15,10 +15,16 @@
         $nombrePagina="";
         if(!empty($_GET['pagina'])){
             $pagina= explode("/",$_GET['pagina']);
-            $nombrePagina=ucfirst($pagina[0]);
+            $nombrePagina=$pagina[0];
+            switch($pagina[0]){
+                case 'deseos':
+                    $nombrePagina="Lista de Deseos";
+                break;
+            }
             if(!empty($pagina[1])){
-                $nombrePagina=ucfirst($pagina[1]);
+                $nombrePagina=$pagina[1];
             }
         }
+        $nombrePagina=ucfirst($nombrePagina);
         return $nombrePagina;
     }

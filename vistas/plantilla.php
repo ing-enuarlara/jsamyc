@@ -189,7 +189,7 @@
                     </a>
                     <div id="megame" class="megamenu" style="width:1000px;background-image:url(https://via.placeholder.com/524x400);background-position:top right;">
                         <ul class="grid" style="padding-right:30% !important;">
-                            <li class="grid__item">
+                            <li class="grid__item grid__item-prod">
                                 <a href="#" class="grid__link"><b>DESTACADAS</b></a>
                                 <ul class="sublink">
                                     <li class="sublink__2">
@@ -206,7 +206,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="grid__item">
+                            <li class="grid__item grid__item-prod">
                                 <a href="#" class="grid__link"><b>EXCLUSIVAS</b></a>
                                 <ul class="sublink">
                                     <li class="sublink__2">
@@ -223,7 +223,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="grid__item">
+                            <li class="grid__item grid__item-prod">
                                 <a href="#" class="grid__link"><b>MÁS JOYAS</b></a>
                                 <ul class="sublink">
                                     <li class="sublink__2">
@@ -770,10 +770,10 @@
         <ul class="mini-products-list">
             <li id="cart-title">Su carrito actualmente esta vacio</li>
             <li class="grid">
-                <a href="#" class="grid__item width">
+                <a href="#" class="grid__item grid__item-prod width">
                     <img src="https://via.placeholder.com/100x100" alt="" class="imgFl">
                 </a>
-                <div class="grid__item product-details">
+                <div class="grid__item grid__item-prod product-details">
                     <a href="#" class="remove"><i class="fa-solid fa-xmark"></i></a>
                     <a href="#" class="pName">CADENA SINGAPUR ITALY ORO AMARILLO 0,95 MM 45 Cm 0,84 Gr</a>
                     <div class="vropts"></div>
