@@ -325,10 +325,13 @@ a.opcion__card {
     padding: 0 !important;
 }
 .grid__item{
-    margin-bottom: 25px;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
+    width: 100%;
+}
+.grid__item-prod{
+    margin-bottom: 25px;
     width: 33.33333%;
 }
 .grid__link{
@@ -825,7 +828,7 @@ ul.menucate li ul {
     padding-right: 15px;
     max-width: 1240px;
 }
-.page-width:after {
+.page-width:after, .grid:after {
     content: "";
     display: table;
     clear: both;
@@ -1520,15 +1523,13 @@ option {
     place-items: center;
 }
 /*****************************CONTACTO*******************************/
-.page-title {
+h1.page-title {
     letter-spacing: normal;
     font-weight: 400;
     font-size: 18px !important;
     position: relative;
     margin: 0 0 30px;
     text-align: center;
-}
-.contenido__contacto h1, .contenido__registro h1, .contenido__acceso h1{
     width: 100%;
 }
 .contenido_formulario {

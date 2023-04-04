@@ -59,7 +59,7 @@
                     <div class="widget-title">Categorias</div>
                     <div class="widget-content">
                         <ul class="sidebar_cate">
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="<?=RUTA?>tienda/cadenas" class="site-nav lvl-1">Cadenas</a>
                                 <ul class="subLinks">
                                     <li class="lvl-2">
@@ -85,16 +85,16 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/dijes" class="site-nav lvl-1">Dijes</a>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/rosarios" class="site-nav lvl-1">Rosarios</a>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/gargantillas" class="site-nav lvl-1">Gargantillas</a>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/anillos" class="site-nav lvl-1">Anillos</a>
                                 <ul class="subLinks">
                                     <li class="lvl-2">
@@ -114,7 +114,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/pulseras" class="site-nav lvl-1">Pulseras</a>
                                 <ul class="subLinks">
                                     <li class="lvl-2">
@@ -128,10 +128,10 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/aros" class="site-nav lvl-1">Aros</a>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/aretes" class="site-nav lvl-1">Aretes</a>
                                 <ul class="subLinks">
                                     <li class="lvl-2">
@@ -142,13 +142,13 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/tobilleras" class="site-nav lvl-1">Tobilleras</a>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/herrajes" class="site-nav lvl-1">Herrajes</a>
                             </li>
-                            <li class="grid__item lvl-1 ">
+                            <li class="grid__item grid__item-prod lvl-1 ">
                                 <a href="/collections/bolas" class="site-nav lvl-1">Bolas</a>
                                 <ul class="subLinks">
                                     <li class="lvl-2">
@@ -249,7 +249,7 @@
         <div class="contenedor_producto_tienda">
             <div id="" class="grid grid-products carousel slick-initialized slick-slider">
                 <div class="slick-list draggable">
-                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                    <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
                                 <a class="grid-view-item__link" href="#" tabindex="0">
@@ -305,7 +305,7 @@
             </div>
             <div id="" class="grid grid-products carousel slick-initialized slick-slider">
                 <div class="slick-list draggable">
-                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                    <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
                                 <a class="grid-view-item__link" href="#" tabindex="0">
@@ -361,7 +361,7 @@
             </div>
             <div id="" class="grid grid-products carousel slick-initialized slick-slider">
                 <div class="slick-list draggable">
-                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                    <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
                                 <a class="grid-view-item__link" href="#" tabindex="0">
@@ -417,7 +417,7 @@
             </div>
             <div id="" class="grid grid-products carousel slick-initialized slick-slider">
                 <div class="slick-list draggable">
-                    <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                    <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
                                 <a class="grid-view-item__link" href="#" tabindex="0">

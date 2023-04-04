@@ -55,7 +55,7 @@
             <div class="contenedor_producto">
                 <div id="" class="grid grid-products carousel slick-initialized slick-slider">
                     <div class="slick-list draggable">
-                        <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                        <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                             <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                                 <div class="grid-view_image">
                                     <a class="grid-view-item__link" href="#" tabindex="0">
@@ -135,7 +135,7 @@
     <div class="contenedor_producto">
         <div id="" class="grid grid-products carousel slick-initialized slick-slider">
             <div class="slick-list draggable">
-                <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                     <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                         <div class="grid-view_image">
                             <a class="grid-view-item__link" href="#" tabindex="0">
@@ -202,7 +202,7 @@
     <div class="contenedor_producto">
         <div id="" class="grid grid-products carousel slick-initialized slick-slider">
             <div class="slick-list draggable">
-                <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                     <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                         <div class="grid-view_image">
                             <a class="grid-view-item__link" href="#" tabindex="0">
@@ -248,7 +248,7 @@
         </div>
         <div id="" class="grid grid-products carousel slick-initialized slick-slider">
             <div class="slick-list draggable">
-                <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                     <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                         <div class="grid-view_image">
                             <a class="grid-view-item__link" href="#" tabindex="0">
@@ -296,7 +296,7 @@
         </div>
         <div id="" class="grid grid-products carousel slick-initialized slick-slider">
             <div class="slick-list draggable">
-                <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                     <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                         <div class="grid-view_image">
                             <a class="grid-view-item__link" href="#" tabindex="0">
@@ -344,7 +344,7 @@
         </div>
         <div id="" class="grid grid-products carousel slick-initialized slick-slider">
             <div class="slick-list draggable">
-                <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                     <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                         <div class="grid-view_image">
                             <a class="grid-view-item__link" href="#" tabindex="0">
@@ -392,7 +392,7 @@
         </div>
         <div id="" class="grid grid-products carousel slick-initialized slick-slider">
             <div class="slick-list draggable">
-                <div class="grid__item item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                     <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                         <div class="grid-view_image">
                             <a class="grid-view-item__link" href="#" tabindex="0">
