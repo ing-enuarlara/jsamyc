@@ -98,10 +98,10 @@ input, textarea, select {
     text-align: center !important;
 }
 .aling-right{
-    text-align: right;
+    text-align: right !important;
 }
 .aling-left{
-    text-align: left;
+    text-align: left !important;
 }
 .cursor{
     cursor: pointer;
@@ -640,14 +640,14 @@ ul.menucate li ul {
     opacity: 1;
 }
 .btnCard__secondary {
-    color: #fff;
-    background-color: #e55151;
-    border-color: #e34848;
+    color: #fff !important;
+    background-color: #e55151 !important;
+    border-color: #e34848 !important;
 }
 .btnCard__secondary:hover{
-    color: #fff;
-    background-color: #111;
-    border-color: #111;
+    color: #fff !important;
+    background-color: #111 !important;
+    border-color: #111 !important;
 }
 .wa-splmn-chat-btn-offset {
     bottom: 20px;
@@ -1568,4 +1568,81 @@ input.custCheck {
 .form-vertical .btnCard, .form-vertical [type=submit] {
     display: inline-block;
     width: auto;
+}
+/****************************DESEOS***********************************/
+.wishlist-product {
+    margin: 20px 0 0;
+}
+.wishlist-product li {
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+    list-style: none;
+    padding: 15px 0;
+    display: table;
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+}
+.wishlist-product li:first-child {
+    color: #000;
+    font-weight: 700;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+.wishlist-product li {
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+    list-style: none;
+    padding: 15px 0;
+    display: table;
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+}
+.wishlist-product .product_img {
+    width: 100px;
+    padding: 0;
+}
+.wishlist-product .product_name {
+    text-align: left;
+    padding-left: 20px;
+}
+.wishlist-product a.product-title {
+    color: #000;
+}
+.wishlist-product .product_price {
+    width: 14%;
+    text-align: center;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+.product-price__price {
+    color: #222;
+}
+.wishlist-product .product_stock {
+    min-width: 110px;
+    width: 15%;
+}
+.instock {
+    color: #76bd1c;
+}
+.wishlist-product .product_add {
+    width: 170px;
+    text-align: center;
+}
+.wishlist-product .product_remove {
+    width: 40px;
+    text-align: center;
+}
+.wishlist-product .btnCard-remove-wishlist {
+    padding: 9px;
+    line-height: 1;
+}
+.wishlist-product li>div {
+    display: table-cell;
+    vertical-align: middle;
 }
