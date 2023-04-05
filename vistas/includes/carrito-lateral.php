@@ -33,7 +33,7 @@
             <form action="#" method="post">
                 <input type="submit" name="checkout" id="cartDWcheckout" class="btnCard btnCard__primary" value="Finalizar pedido">
             </form>
-            <a id="inlinecheckout-cart" href="#" class="btnCard btnCard__secondary">Ver carrito</a>
+            <a id="inlinecheckout-cart" href="<?=RUTA?>carrito" class="btnCard btnCard__secondary">Ver carrito</a>
         </li>
     </ul>
 </div>

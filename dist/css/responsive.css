@@ -258,6 +258,23 @@
     .cantactame {
         flex-direction: column;
     }
+    .small--hide {
+        display: none!important;
+    }
+    .cart__image-wrapper {
+        width: 60px;
+        padding: 10px 0;
+    }
+    .cart__footer {
+        flex-direction: column;
+    }
+    .cart__footer .grid__item {
+        width: 100%;
+        max-width: 100%;
+    }
+    .cart .bdr-box {
+        padding: 15px;
+    }
 }
 
 /* Landscape phones and down */

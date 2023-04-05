@@ -20,6 +20,9 @@
                 case 'deseos':
                     $nombrePagina="Lista de Deseos";
                 break;
+                case 'carrito':
+                    $nombrePagina="Carrito de compra";
+                break;
             }
             if(!empty($pagina[1])){
                 $nombrePagina=$pagina[1];
