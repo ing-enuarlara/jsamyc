@@ -1,4 +1,3 @@
-
 <div class="encabezado">
     <div class="contenido__encabezado">
         <div class="conten__enca aling-left text">
