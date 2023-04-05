@@ -67,7 +67,7 @@
                 <ul id="menUsu">
                     <li><a href="https://elitejoyeria.com.co/account/login">Iniciar Sesión</a></li>
                     <li><a href="https://elitejoyeria.com.co/account">Mi Cuenta</a></li>
-                    <li><a href="https://elitejoyeria.com.co/cart">Carrito de Compras</a></li>
+                    <li><a href="<?=RUTA?>carrito">Carrito de Compras</a></li>
                     <li><a href="<?=RUTA?>deseos">Lista de Deseos</a></li>
                 </ul>
             </div>
