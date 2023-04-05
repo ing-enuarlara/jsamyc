@@ -45,7 +45,7 @@
             <div id="settingsBox">
                 <div class="customer-links">
                     <p>
-                        <a href="acceso" class="btnSetting btnCard">ACCESO</a>
+                        <a href="<?=RUTA?>acceso" class="btnSetting btnCard">ACCESO</a>
                     </p>
                     <p class="centrar-texto">
                         ¿Nuevo usuario?
