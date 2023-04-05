@@ -39,12 +39,12 @@
 
 <body>
     <div class="top-header-wrapper">
-        <?php 
+        <?php
             include(RUTA_PROYECTO."vistas/includes/top-header.php");
         ?>
     </div>
     <header id="header" class="animated">
-        <?php 
+        <?php
             include(RUTA_PROYECTO."vistas/includes/encabezado.php");
         ?>
         <div class="nav-bg centrar-texto">
@@ -249,7 +249,7 @@
         </div>
     </header>
     <main class="contenedor" id="contenedor">
-        <?php 
+        <?php
             include(RUTA_PROYECTO."vistas/includes/navegacion.php");
             $ruta= new ControladorPlantilla();
             $ruta->ctrEnlacesPaginas();
