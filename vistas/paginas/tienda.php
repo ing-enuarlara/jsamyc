@@ -252,51 +252,53 @@
                     <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
-                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                <a class="grid-view-item__link" href="<?=RUTA?>productos">
                                     <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
                                         <picture style="display: block;">
                                             <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
                                         </picture>
-                                        <div class="button-set">
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <circle cx="6" cy="19" r="2" />
-                                                    <circle cx="17" cy="19" r="2" />
-                                                    <path d="M17 17h-11v-14h-2" />
-                                                    <path d="M6 5l14 1l-1 7h-13" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                    <circle cx="10" cy="10" r="7" />
-                                                    <line x1="7" y1="10" x2="13" y2="10" />
-                                                    <line x1="10" y1="7" x2="10" y2="13" />
-                                                    <line x1="21" y1="21" x2="15" y2="15" />
-                                                </svg>
-                                            </a>
-                                        </div>
                                     </div>
                                 </a>
+                                <div class="button-set">
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                            viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="6" cy="19" r="2" />
+                                            <circle cx="17" cy="19" r="2" />
+                                            <path d="M17 17h-11v-14h-2" />
+                                            <path d="M6 5l14 1l-1 7h-13" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="7" y1="10" x2="13" y2="10" />
+                                            <line x1="10" y1="7" x2="10" y2="13" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                             <div class="details">
-                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
                                 <div class="grid-view-item__meta">
                                     <!-- Show min to max price -->
                                     <span class="visually-hidden">Precio habitual</span>
                                     <span class="product-price__price">$520.960</span>
+                                </div>
+                                <div class="flatbtn">
+                                    <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
                                 </div>
                             </div>
                         </div>
@@ -308,51 +310,53 @@
                     <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
-                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                <a class="grid-view-item__link" href="<?=RUTA?>productos">
                                     <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
                                         <picture style="display: block;">
                                             <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
                                         </picture>
-                                        <div class="button-set">
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <circle cx="6" cy="19" r="2" />
-                                                    <circle cx="17" cy="19" r="2" />
-                                                    <path d="M17 17h-11v-14h-2" />
-                                                    <path d="M6 5l14 1l-1 7h-13" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                    <circle cx="10" cy="10" r="7" />
-                                                    <line x1="7" y1="10" x2="13" y2="10" />
-                                                    <line x1="10" y1="7" x2="10" y2="13" />
-                                                    <line x1="21" y1="21" x2="15" y2="15" />
-                                                </svg>
-                                            </a>
-                                        </div>
                                     </div>
                                 </a>
+                                <div class="button-set">
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                            viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="6" cy="19" r="2" />
+                                            <circle cx="17" cy="19" r="2" />
+                                            <path d="M17 17h-11v-14h-2" />
+                                            <path d="M6 5l14 1l-1 7h-13" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="7" y1="10" x2="13" y2="10" />
+                                            <line x1="10" y1="7" x2="10" y2="13" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                             <div class="details">
-                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
                                 <div class="grid-view-item__meta">
                                     <!-- Show min to max price -->
                                     <span class="visually-hidden">Precio habitual</span>
                                     <span class="product-price__price">$520.960</span>
+                                </div>
+                                <div class="flatbtn">
+                                    <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
                                 </div>
                             </div>
                         </div>
@@ -364,51 +368,53 @@
                     <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
-                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                <a class="grid-view-item__link" href="<?=RUTA?>productos">
                                     <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
                                         <picture style="display: block;">
                                             <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
                                         </picture>
-                                        <div class="button-set">
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <circle cx="6" cy="19" r="2" />
-                                                    <circle cx="17" cy="19" r="2" />
-                                                    <path d="M17 17h-11v-14h-2" />
-                                                    <path d="M6 5l14 1l-1 7h-13" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                    <circle cx="10" cy="10" r="7" />
-                                                    <line x1="7" y1="10" x2="13" y2="10" />
-                                                    <line x1="10" y1="7" x2="10" y2="13" />
-                                                    <line x1="21" y1="21" x2="15" y2="15" />
-                                                </svg>
-                                            </a>
-                                        </div>
                                     </div>
                                 </a>
+                                <div class="button-set">
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                            viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="6" cy="19" r="2" />
+                                            <circle cx="17" cy="19" r="2" />
+                                            <path d="M17 17h-11v-14h-2" />
+                                            <path d="M6 5l14 1l-1 7h-13" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="7" y1="10" x2="13" y2="10" />
+                                            <line x1="10" y1="7" x2="10" y2="13" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                             <div class="details">
-                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
                                 <div class="grid-view-item__meta">
                                     <!-- Show min to max price -->
                                     <span class="visually-hidden">Precio habitual</span>
                                     <span class="product-price__price">$520.960</span>
+                                </div>
+                                <div class="flatbtn">
+                                    <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
                                 </div>
                             </div>
                         </div>
@@ -420,51 +426,53 @@
                     <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
                         <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
                             <div class="grid-view_image">
-                                <a class="grid-view-item__link" href="#" tabindex="0">
+                                <a class="grid-view-item__link" href="<?=RUTA?>productos">
                                     <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
                                         <picture style="display: block;">
                                             <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
                                         </picture>
-                                        <div class="button-set">
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <circle cx="6" cy="19" r="2" />
-                                                    <circle cx="17" cy="19" r="2" />
-                                                    <path d="M17 17h-11v-14h-2" />
-                                                    <path d="M6 5l14 1l-1 7h-13" />
-                                                </svg>
-                                            </a>
-                                            <a class="btn btn_tienda add-to-cart" href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                    <circle cx="10" cy="10" r="7" />
-                                                    <line x1="7" y1="10" x2="13" y2="10" />
-                                                    <line x1="10" y1="7" x2="10" y2="13" />
-                                                    <line x1="21" y1="21" x2="15" y2="15" />
-                                                </svg>
-                                            </a>
-                                        </div>
                                     </div>
                                 </a>
+                                <div class="button-set">
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                                            viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="6" cy="19" r="2" />
+                                            <circle cx="17" cy="19" r="2" />
+                                            <path d="M17 17h-11v-14h-2" />
+                                            <path d="M6 5l14 1l-1 7h-13" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="7" y1="10" x2="13" y2="10" />
+                                            <line x1="10" y1="7" x2="10" y2="13" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                             <div class="details">
-                                <a href="#" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
+                                <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
                                 <div class="grid-view-item__meta">
                                     <!-- Show min to max price -->
                                     <span class="visually-hidden">Precio habitual</span>
                                     <span class="product-price__price">$520.960</span>
+                                </div>
+                                <div class="flatbtn">
+                                    <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
                                 </div>
                             </div>
                         </div>

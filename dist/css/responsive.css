@@ -1,5 +1,8 @@
 /* Large desktop */
 @media (min-width: 1024px) {
+    body {
+        letter-spacing: .02em;
+    }
     .top-header, .contenido__encabezado{
         padding: 0 30px;
     }
@@ -23,10 +26,6 @@
     .grid {
         margin: 0 -7.5px;
     }
-    .grid__item {
-        padding-left: 7.5px;
-        padding-right: 7.5px;
-    }
     .grid-products {
         margin: 0 -15px;
     }
@@ -43,11 +42,26 @@
     .input-group__field, .input-group__btn .btnCard {
         height: 40px;
     }
-    .medium-up--one-half {
+    .medium-up--five-tenths, .medium-up--four-eighths, .medium-up--one-half, .medium-up--three-sixths, .medium-up--two-quarters {
         width: 50%;
     }
     input, textarea, select {
         padding: 10px 18px;
+    }
+    .product-single__photos {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 70px;
+    }
+    .page-width .slick-prev {
+        left: -10px;
+    }
+    .page-width .slick-next {
+        right: -10px;
+    }
+    .thumbnails-wrapper {
+        padding-top: 10px;
+        margin: 0 -5px;
     }
 }
 /* Portrait tablet to landscape and desktop */
@@ -129,11 +143,25 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
-    .medium-up--one-half {
+    .medium-up--five-tenths, .medium-up--four-eighths, .medium-up--one-half, .medium-up--three-sixths, .medium-up--two-quarters {
         width: 50%;
+    }
+    .product-single__photos {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 70px;
     }
     input, textarea, select {
         padding: 10px 18px;
+    }
+    .page-width .slick-prev {
+        left: 0;
+    }
+    .page-width .slick-next {
+        right: 0;
+    }
+    .thumbnails-wrapper .product-single__thumbnails {
+        margin: 6px -3px 0;
     }
 }
 
@@ -274,6 +302,18 @@
     }
     .cart .bdr-box {
         padding: 15px;
+    }
+    .product-single__photos {
+        margin-bottom: 25px;
+    }
+    .slick-arrow {
+        height: 30px;
+        width: 30px;
+        line-height: 29px;
+        opacity: 1!important;
+    }
+    .thumbnails-wrapper .product-single__thumbnails {
+        margin: 6px -3px 0;
     }
 }
 

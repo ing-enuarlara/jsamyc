@@ -22,7 +22,11 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- FONTAWESOME -->
-    <script src="https://kit.fontawesome.com/e84fa1cf78.js" crossorigin="anonymous"></script>
+    <link href="<?=RUTA?>dist/fontawesome/css/all.css" rel="stylesheet">
+    <link href="<?=RUTA?>dist/fontawesome/css/solid.css" rel="stylesheet">
+    <link href="<?=RUTA?>dist/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="<?=RUTA?>dist/fontawesome/css/regular.css" rel="stylesheet">
+    <link href="<?=RUTA?>dist/fontawesome/css/fontawesome.css" rel="stylesheet">
     
     <!-- SLIDER -->
     <link rel="stylesheet" href="<?=RUTA?>dist/css/my-slider.css"/>
