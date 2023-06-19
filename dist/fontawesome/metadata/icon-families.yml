@@ -39428,7 +39428,7 @@ shop-slash:
       - shopping
   unicode: e070
   voted: false
-shopify:
+ing-store:
   changes:
     - 5.12.1
     - 5.14.0
@@ -39439,7 +39439,7 @@ shopify:
     pro:
       - family: classic
         style: brands
-  label: Shopify
+  label: ing-store
   search:
     terms: []
   unicode: e057

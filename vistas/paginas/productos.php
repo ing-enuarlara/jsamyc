@@ -1,5 +1,5 @@
 <div class="page-width contenido__producto__detalles">
-    <div id="shopify-section-template--15718900203671__product" class="shopify-section">
+    <div id="ing-store-section-template--15718900203671__product" class="ing-store-section">
         <div class="ptContainer style3" data-style="style3" id="ProductSection-template--15718900203671__product" data-section-id="template--15718900203671__product" data-section-type="product" data-enable-history-state="true">
             <div class="grid product-single">
                 <div class="grid__item medium-up--one-half product-single__photos bottom">
@@ -39,7 +39,7 @@
                             <i class="fa-brands fa-square-twitter"></i>
                             <span class="share-title" aria-hidden="true">Tuitear</span>
                         </a>
-                        <a href="//pinterest.com/pin/create/button/?url=https://elitejoyeria.com.co/products/cadena-mini-cubana-especial-italy-oro-amarillo-0-96-mm-50-cm-0-78-gr&amp;media=//cdn.shopify.com/s/files/1/0616/4945/3207/products/WhatsAppImage2023-03-16at21.40.37_1024x1024.jpg?v=1679020860&amp;description=CADENA%20MINI%20CUBANA%20ESPECIAL%20ITALY%20ORO%20AMARILLO%200,96%20MM%2045%20Cm%200,75%20Gr" class="btn--share share-pinterest" title="Pinear en Pinterest" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=380,width=660');return false;">
+                        <a href="//pinterest.com/pin/create/button/?url=https://elitejoyeria.com.co/products/cadena-mini-cubana-especial-italy-oro-amarillo-0-96-mm-50-cm-0-78-gr&amp;media=//cdn.ing-store.com/s/files/1/0616/4945/3207/products/WhatsAppImage2023-03-16at21.40.37_1024x1024.jpg?v=1679020860&amp;description=CADENA%20MINI%20CUBANA%20ESPECIAL%20ITALY%20ORO%20AMARILLO%200,96%20MM%2045%20Cm%200,75%20Gr" class="btn--share share-pinterest" title="Pinear en Pinterest" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=380,width=660');return false;">
                             <i class="fa-brands fa-pinterest"></i>
                             <span class="share-title" aria-hidden="true">Hacer pin</span>
                         </a>
@@ -91,11 +91,11 @@
                                 <span id="AddToCartText-template--15718900203671__product"> Agregar al carrito </span>
                             </button>
                         </div>
-                        <div data-shopify="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" class="shopify-payment-button">
+                        <div data-ing-store="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" class="ing-store-payment-button">
                             <div>
                                 <div>
                                     <div>
-                                        <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded BUz42FHpSPncCPJ4Pr_f jjzYeefyWpPZLH9pIgyw RWJ0IfBjxIhflh4AIrUw" data-testid="Checkout-button">Comprar ahora</button>
+                                        <button type="button" class="ing-store-payment-button__button ing-store-payment-button__button--unbranded BUz42FHpSPncCPJ4Pr_f jjzYeefyWpPZLH9pIgyw RWJ0IfBjxIhflh4AIrUw" data-testid="Checkout-button">Comprar ahora</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                                 </a>
                             </h3>
                             <div id="tabe93fe9d7-86fe-4f4c-8a25-586b3b13ddba" class="tab-content acrd reviewtab">
-                                <div id="shopify-product-reviews" data-id="7954237587607"></div>
+                                <div id="ing-store-product-reviews" data-id="7954237587607"></div>
                             </div>
                         </div>
                     </div>
