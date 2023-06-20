@@ -2207,3 +2207,50 @@ p.product-type {
 .template-product .tab-content {
     padding: 15px;
 }
+.shopify-policy__container {
+    max-width: 1000px;
+}
+.shopify-policy__container {
+    /* max-width: 560px;
+    max-width: 65ch; */
+    margin: 0 auto;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.shopify-policy__container {
+    padding: 30px 0;
+}
+.shopify-policy__title {
+    text-align: center;
+}
+.shopify-policy__title h1 {
+    font-size: 36px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    color: black;
+    text-align: left !important;
+}
+.shopify-policy__title h1, .page-title {
+    letter-spacing: normal;
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    margin: 0 0 30px;
+    text-align: center;
+}
+.rte:last-child {
+    margin-bottom: 0;
+}
+.rte p, .rte {
+    margin-bottom: 20px;
+}
+.rte ul {
+    list-style: disc outside;
+}
+.rte ol, .rte ul {
+    margin: 20px 0 30px 30px;
+}
+.rte li {
+    margin-bottom: 4px;
+    list-style: inherit;
+}

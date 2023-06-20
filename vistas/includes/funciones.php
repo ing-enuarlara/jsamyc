@@ -23,6 +23,18 @@
                 case 'carrito':
                     $nombrePagina="Carrito de compra";
                 break;
+                case 'politica-privacidad':
+                    $nombrePagina="Políticas de Privacidad";
+                break;
+                case 'terminos-servicios':
+                    $nombrePagina="Términos de Servicios";
+                break;
+                case 'politica-envio':
+                    $nombrePagina="Políticas de Envío";
+                break;
+                case 'politica-garantia':
+                    $nombrePagina="Políticas de Garantías";
+                break;
             }
             if(!empty($pagina[1])){
                 $nombrePagina=$pagina[1];

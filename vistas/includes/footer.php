@@ -74,10 +74,10 @@
             <div id="nav_menu-1561381058776" class="footer-block__item medium-up--one-fifth footer-links">
                 <h4 class="h4 h4Flex" id="Leg">Legales <i id="plusLeg" class="fa-solid fa-plus"></i></h4>
                 <ul id="menLeg">
-                    <li><a href="/policies/privacy-policy">Política de Privacidad</a></li>
-                    <li><a href="/policies/terms-of-service">Términos del Servicio</a></li>
-                    <li><a href="/policies/shipping-policy">Política de Envíos</a></li>
-                    <li><a href="/policies/refund-policy">Política de Garantías</a></li>
+                    <li><a href="<?=RUTA?>politica-privacidad">Política de Privacidad</a></li>
+                    <li><a href="<?=RUTA?>terminos-servicios">Términos del Servicio</a></li>
+                    <li><a href="<?=RUTA?>politica-envio">Política de Envíos</a></li>
+                    <li><a href="<?=RUTA?>politica-garantia">Política de Garantías</a></li>
                 </ul>
             </div>
         </div>
