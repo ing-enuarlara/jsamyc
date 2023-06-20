@@ -509,7 +509,7 @@ ul.menucate li ul {
     transform: translate(400px);
 }
 #settingsBox, .cart_drawer, #searchPopup {
-    color: #222;
+    color: #222 !important;
     text-align: left;
     background-color: #fff;
     box-shadow: 0 0 15px #2222221a;
@@ -792,7 +792,7 @@ ul.menucate li ul {
     width: 1%;
 }
 #searchPopup .btnSearch {
-    color: #222;
+    color: #222 !important;
     opacity: .5;
     padding: 0;
     border: 0 none;
@@ -805,6 +805,51 @@ ul.menucate li ul {
     stroke: var(--oscuro);
     width: 20px;
     height: 20px;
+}
+.search-results {
+    list-style-type: none !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 -5px !important;
+    padding: 10px 0 0 !important;
+}
+.search-results li:nth-child(4n+1) {
+    clear: both;
+}
+.search-results li {
+    float: left;
+    vertical-align: top;
+    width: 25%;
+    margin: 0;
+    padding: 5px;
+}
+.search-results a {
+    color: #222;
+    display: table;
+    width: 100%;
+    text-decoration: none;
+}
+.search-results .img {
+    display: table-cell;
+    width: 60px;
+    padding: 5px;
+    vertical-align: middle;
+}
+.search-results .img img {
+    display: block;
+    margin: 0 auto;
+}
+.search-results .details {
+    padding: 5px;
+    line-height: 1.2;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+.search-results .price {
+    display: block;
+    font-weight: 700;
+    margin-top: 5px;
 }
 .icon__fallback-text, .visually-hidden {
     position: absolute!important;
@@ -841,7 +886,7 @@ ul.menucate li ul {
 }
 #settingsBox .ctLink {
     color: #222;
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 #openFilter, #closeFilter, #settingsBox .large-up--hide{
     display: none;
