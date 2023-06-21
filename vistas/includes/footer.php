@@ -55,20 +55,21 @@
                 <h4 class="h4 h4Flex" id="Cat">Categorías <i id="plusCat" class="fa-solid fa-plus"></i></h4>
                 <ul id="menCat">
                     <li><a href="<?=RUTA?>tienda/cadenas">Cadenas</a></li>
-                    <li><a href="/collections/dijes">Dijes</a></li>
-                    <li><a href="/collections/aretes">Aretes</a></li>
-                    <li><a href="/collections/pulseras">Pulseras</a></li>
-                    <li><a href="/collections/anillos">Anillos</a></li>
-                    <li><a href="/collections/tobilleras">Tobilleras</a></li>
+                    <li><a href="<?=RUTA?>tienda/dijes">Dijes</a></li>
+                    <li><a href="<?=RUTA?>tienda/aretes">Aretes</a></li>
+                    <li><a href="<?=RUTA?>tienda/pulseras">Pulseras</a></li>
+                    <li><a href="<?=RUTA?>tienda/anillos">Anillos</a></li>
+                    <li><a href="<?=RUTA?>tienda/tobilleras">Tobilleras</a></li>
                 </ul>
             </div>
             <div id="nav_menu-1561381031703" class="footer-block__item medium-up--one-fifth footer-links">
                 <h4 class="h4 h4Flex" id="Usu">Usuario <i id="plusUsu" class="fa-solid fa-plus"></i></h4>
                 <ul id="menUsu">
-                    <li><a href="https://elitejoyeria.com.co/account/login">Iniciar Sesión</a></li>
-                    <li><a href="https://elitejoyeria.com.co/account">Mi Cuenta</a></li>
+                    <li><a href="<?= RUTA ?>acceso">Iniciar Sesión</a></li>
+                    <li><a href="<?= RUTA ?>vistas/clientes/">Mi Cuenta</a></li>
                     <li><a href="<?=RUTA?>carrito">Carrito de Compras</a></li>
                     <li><a href="<?=RUTA?>deseos">Lista de Deseos</a></li>
+                    <li><a href="http://localhost/ing-enuarlara.co/admin/" target="_blank">AdminZEFE</a></li>
                 </ul>
             </div>
             <div id="nav_menu-1561381058776" class="footer-block__item medium-up--one-fifth footer-links">
