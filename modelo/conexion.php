@@ -1,16 +1,38 @@
 <?php
-    class Conexion{
-        static public function conectar(){
+    // class Conexion{
+    //     static public function conectar(){
 
-            $server= 'localhost';
-            $user= 'root';
-            $pwd= 'zefe07EL';
-            $bd= 'curso-php';
+    //         $server= 'localhost';
+    //         $user= 'root';
+    //         $pwd= 'zefe07EL';
+    //         $bd= 'curso-php';
 
-            $con= new PDO("mysql:host=$server;dbname=$bd",$user,$pwd);
-            $con->exec("set names utf8");
+    //         $con= new PDO("mysql:host=$server;dbname=$bd",$user,$pwd);
+    //         $con->exec("set names utf8");
             
-            return $con;
-        }        
-    }
+    //         return $con;
+    //     }        
+    // }
     
+    const SERVER = 'localhost' ;
+    const USER = 'root';
+    const PASS = 'zefe07EL';
+    const BDADMIN = 'adminzefe_admin';
+    const BDGENERAL = 'adminzefe_general';
+    const BDMODADMINISTRATIVO= 'adminzefe_modulo_administrativo';
+    const BDMODCOMERCIAL= 'adminzefe_modulo_comercial';
+    const BDMODMICUENTA= 'adminzefe_modulo_micuenta';
+    const BDMODSISTEMA= 'adminzefe_modulo_sistema';
+    
+    $conexionBdAdmin = new mysqli(SERVER, USER, PASS, BDADMIN);
+    $conexionBdGeneral = new mysqli(SERVER, USER, PASS, BDGENERAL);
+    $conexionBdAdministrativo = new mysqli(SERVER, USER, PASS, BDMODADMINISTRATIVO);
+    $conexionBdComercial = new mysqli(SERVER, USER, PASS, BDMODCOMERCIAL);
+    $conexionBdMicuenta = new mysqli(SERVER, USER, PASS, BDMODMICUENTA);
+    $conexionBdSistema = new mysqli(SERVER, USER, PASS, BDMODSISTEMA);
+    
+    $consultaConfig = $conexionBdGeneral->query("SELECT * FROM configuracion WHERE conf_id_empresa=2");
+    $configuracion = mysqli_fetch_array($consultaConfig, MYSQLI_BOTH);
+    
+    $consultaConfigColor = $conexionBdGeneral->query("SELECT * FROM general_color_store WHERE gcs_id_empresa=2");
+    $configuracionColor = mysqli_fetch_array($consultaConfigColor, MYSQLI_BOTH);

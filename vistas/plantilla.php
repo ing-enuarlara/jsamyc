@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/normalize.css">
 
     <!-- STYLE -->
-    <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/style.php">
     <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/responsive.css">
 
     <!-- BOOTSTRAP -->

@@ -489,7 +489,7 @@
     </ul>
 </div>
 <div class="newsletter-section  wow fadeIn" style="visibility: visible; animation-name: fadeIn;"> 
-    <div class="section-cover" style="background-color:#dddddd;">    
+    <div class="section-cover">    
         <div class="sec-ttl centrar-texto">
             <h3 class="h3 ft1">
                 <span class="dbi pr">
