@@ -1,12 +1,8 @@
-<?php
-const RUTA = 'http://localhost/ing-enuarlara.co/jsamyc/';
-const RUTA_PROYECTO = 'C:/xampp/htdocs/ing-enuarlara.co/jsamyc/';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include(RUTA_PROYECTO . "vistas/clientes/includes/head.php"); ?>
+    <?php include("includes/head.php"); ?>
 </head>
 
 <body style="background-color: rgb(255, 255, 255); cursor: auto;" cz-shortcut-listen="true">
