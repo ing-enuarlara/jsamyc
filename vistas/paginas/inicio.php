@@ -1,28 +1,44 @@
+<?php
+include(RUTA_PROYECTO."vistas/includes/configPagina.php");
+if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider'])) {
+?>
 <div class="ism-slider" data-transition_type="fade" data-play_type="loop" data-interval="10000" data-buttons="false" id="my-slider">
     <ol>
+        <?php if (!empty($configuracion['conf_slider1'])) { ?>
         <li>
             <a href="" target="_self">
-                <img src="<?= RUTA ?>dist/img/slides/city-690332_1280.jpg">
-                <!-- <div class="ism-caption ism-caption-0">My slide caption text</div> -->
+                <img src="<?=RUTA_ADMIN.'files/slider/' . $configuracion['conf_slider1'];?>">
+                <div class="ism-caption ism-caption-0"><?=$configuracion['conf_textSlider1'];?></div>
             </a>
         </li>
+        <?php
+        } 
+        if (!empty($configuracion['conf_slider2'])) { ?>
+        <li>
+            <a href="" target="_self">
+                <img src="<?=RUTA_ADMIN.'files/slider/' . $configuracion['conf_slider2'];?>">
+                <div class="ism-caption ism-caption-0"><?=$configuracion['conf_textSlider2'];?></div>
+            </a>
+        </li>
+        <?php } ?>
     </ol>
 </div>
+<?php } ?>
 <div class="page-width">
     <div class="grid contenido__ofertas">
         <div class="spaces">
             <a href="">
-                <img class="imgFl" src="https://via.placeholder.com/729x409">
+                <img class="imgFl" src="<?=RUTA_ADMIN.$bannerP1;?>">
             </a>
         </div>
         <div class="spaces">
             <a href="">
-                <img class="imgFl" src="https://via.placeholder.com/729x409">
+                <img class="imgFl" src="<?=RUTA_ADMIN.$bannerP2;?>">
             </a>
         </div>
         <div class="spaces">
             <a href="">
-                <img class="imgFl" src="https://via.placeholder.com/729x409">
+                <img class="imgFl" src="<?=RUTA_ADMIN.$bannerP3;?>">
             </a>
         </div>
     </div>
@@ -108,17 +124,17 @@
     <div class="grid contenido__ofertas">
         <div class="spaces">
             <a href="">
-                <img class="imgFl" src="https://via.placeholder.com/729x409">
+                <img class="imgFl" src="<?=RUTA_ADMIN.$bannerP4;?>">
             </a>
         </div>
         <div class="spaces">
             <a href="">
-                <img class="imgFl" src="https://via.placeholder.com/729x409">
+                <img class="imgFl" src="<?=RUTA_ADMIN.$bannerP5;?>">
             </a>
         </div>
         <div class="spaces">
             <a href="">
-                <img class="imgFl" src="https://via.placeholder.com/729x409">
+                <img class="imgFl" src="<?=RUTA_ADMIN.$bannerP6;?>">
             </a>
         </div>
     </div>
@@ -186,7 +202,7 @@
     <div class="grid contenido__anuncio">
         <div class="spaces">
             <a href="">
-                <img class="imgFl" src="https://via.placeholder.com/1230x400">
+                <img class="imgFl" src="<?=RUTA_ADMIN.$bannerG1;?>">
             </a>
         </div>
     </div>
@@ -442,35 +458,35 @@
     <div class="sec-ttl centrar-texto">
         <h3 class="h3 ft1">
             <span class="dbi pr">
-                <strong>ÉLITE JOYERÍA EN INSTAGRAM</strong>
+                <strong><?=$configuracion['conf_empresa'];?> EN INSTAGRAM</strong>
             </span>
         </h3>
-        <p>Síguenos en Instagram y entérate de primera mano de todas las novedades <a class="link_instagram" href="#">@elite.joyeria</a></p>
+        <p>Síguenos en Instagram y entérate de primera mano de todas las novedades <a class="link_instagram" href="<?=$configuracion['conf_instagram'];?>" target="_blank"><?=$configuracion['conf_empresa'];?></a></p>
     </div>
     <div class="followus">
-        <a href="Ver en Instagram" title="Ver en Instagram" target="_blank" class="btnCard btnCard__primary">Ver en Instagram</a>
+        <a href="<?=$configuracion['conf_instagram'];?>" title="Ver en Instagram" target="_blank" class="btnCard btnCard__primary">Ver en Instagram</a>
     </div>
 </div>
 <div class="page-width wow fadeIn sectio__store-info" style="visibility: visible; animation-name: fadeIn;">
     <ul class="store-info style1">
-        <!-- <li class="item">
+        <li class="item">
             <a class="centrar-texto" href="#">
                 <i class="fa-solid fa-truck"></i>
                 <div class="text fl1">
-                    <h5>Envíos Internacionales</h5>
+                    <h5>ENVÍOS <?=$configuracion['conf_envios'];?></h5>
                     <span class="sub-text">
-                        <p>Realizamos envíos a cualquier lugar del mundo.</p>
+                        <p>REALIZAMOS ENVÍOS <?=$configuracion['conf_envios'];?>.</p>
                     </span>
                 </div>
             </a>
-        </li> -->
+        </li>
         <li class="item">
             <a class="centrar-texto" href="#">
                 <i class="fa-solid fa-star"></i>
                 <div class="text fl1">
-                    <h5>Calidad Garantizada</h5>
+                    <h5>CALIDAD GARANTIZADA</h5>
                     <span class="sub-text">
-                        <p>Joyas solo en ORO 18K</p>
+                        <p>JOYAS SOLO EN ORO 18K</p>
                     </span>
                 </div>
             </a>
@@ -479,9 +495,9 @@
             <a class="centrar-texto" href="#">
                 <i class="fa-solid fa-credit-card"></i>
                 <div class="text fl1">
-                    <h5>Todos los Medios de Pago</h5>
+                    <h5>TODOS LOS MEDIOS DE PAGOS</h5>
                     <span class="sub-text">
-                        <p>Pago seguro online, contra-entrega o por transferencia.</p>
+                        <p>PAGO SEGURO ONLINE, CONTRA-ENTREGA O POR TRANSFERENCIA.</p>
                     </span>
                 </div>
             </a>
