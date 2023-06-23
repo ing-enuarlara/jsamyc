@@ -1,5 +1,8 @@
 <?php
-    include("modelo/conexion.php");
+    const RUTA = 'http://localhost/ing-enuarlara.co/jsamyc/';
+    const RUTA_PROYECTO = 'C:/xampp/htdocs/ing-enuarlara.co/jsamyc/';
+    const RUTA_ADMIN = 'http://localhost/ing-enuarlara.co/admin/';
+    include(RUTA_PROYECTO."vistas/includes/configPagina.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
