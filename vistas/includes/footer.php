@@ -4,14 +4,23 @@
             <div id="text-713b35d2-3b4a-4fa4-859d-a2c9f25e064a" class="footer-block__item medium-up--one-quarter contact-box">
                 <h4 class="h4">Visítanos</h4>
                 <ul class="addressFooter">
-                    <li><i class="fa-solid fa-location-dot"></i> Calle 52 # 47-28 Local 425<br>Edificio La Ceiba, Medellín, Antioquia</li>
-                    <li class="phone"><i class="fa-sharp fa-solid fa-phone"></i> <a href="tel:+57 315 657 0420">+57 315 657 0420</a></li>
-                    <li class="email"><i class="fa-sharp fa-solid fa-envelope"></i> <a href="mailto:elitejoyeria18K@gmail.com">elitejoyeria18K@gmail.com</a></li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <?=$configuracion['conf_direccion'];?>
+                    </li>
+                    <li class="phone">
+                        <i class="fa-sharp fa-solid fa-phone"></i>
+                        <a href="tel:+57<?=$configuracion['conf_telefono'];?>">+57<?=$configuracion['conf_telefono'];?></a>
+                    </li>
+                    <li class="email">
+                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                        <a href="mailto:<?=$configuracion['conf_email'];?>"><?=$configuracion['conf_email'];?></a>
+                    </li>
                 </ul>
                 <h5 class="h4">Síguenos:</h5>
                 <ul class="list--inline social-icons">
                     <li>
-                        <a class="social-icons__link" href="https://facebook.com/elite.joyeria" title="Élite Joyería en Facebook" target="_blank">
+                        <a class="social-icons__link" href="<?=$configuracion['conf_facebook'];?>" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
@@ -20,7 +29,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="social-icons__link" href="https://www.instagram.com/elite.joyeria/" title="Élite Joyería en Instagram" target="_blank">
+                        <a class="social-icons__link" href="<?=$configuracion['conf_instagram'];?>" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <rect x="4" y="4" width="16" height="16" rx="4" />
@@ -31,7 +40,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="social-icons__link" href="https://www.tiktok.com/@elite.joyeria" title="Élite Joyería en TikTok" target="_blank">
+                        <a class="social-icons__link" href="<?=$configuracion['conf_tiktok'];?>" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tiktok" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5" />
@@ -40,7 +49,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="social-icons__link" href="https://api.whatsapp.com/send?phone=573156570420" title="Élite Joyería en Whatsapp" target="_blank">
+                        <a class="social-icons__link" href="<?=$configuracion['conf_whatsapp'];?>" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
@@ -69,7 +78,7 @@
                     <li><a href="<?= RUTA ?>vistas/clientes/">Mi Cuenta</a></li>
                     <li><a href="<?=RUTA?>carrito">Carrito de Compras</a></li>
                     <li><a href="<?=RUTA?>deseos">Lista de Deseos</a></li>
-                    <li><a href="http://localhost/ing-enuarlara.co/admin/" target="_blank">AdminZEFE</a></li>
+                    <li><a href="<?=RUTA_ADMIN?>" target="_blank">AdminZEFE</a></li>
                 </ul>
             </div>
             <div id="nav_menu-1561381058776" class="footer-block__item medium-up--one-fifth footer-links">
@@ -86,7 +95,7 @@
     <div class="footer-bottom">
         <div class="flex page-width ">
             <div class="aling-left small--text-center">
-                © 2022 Elite Joyería - Todos los derechos reservados | Desarrollado por <a href="#">@ing_enuarlara.co</a>
+                © 2023 <?=$configuracion['conf_empresa'];?> - Todos los derechos reservados | Desarrollado por <a href="https://ing-enuarlara.netlify.app/" target="_blank">@ing_enuarlara.co</a>
             </div>
             <div class="paymentCall aling-right small--text-center">
                 <p class="footer-img">

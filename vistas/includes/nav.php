@@ -11,7 +11,7 @@
                 DESTACADO
                 <i class="fa-solid fa-caret-down"></i>
             </a>
-            <div id="megame" class="megamenu" style="width:1000px;background-image:url(https://via.placeholder.com/524x400);background-position:top right;">
+            <div id="megame" class="megamenu" style="width:1000px;background-image:url(<?=RUTA_ADMIN.$rutaImgMenu;?>);background-position:top right;">
                 <ul class="grid" style="padding-right:30% !important;">
                     <li class="grid__item grid__item-prod">
                         <a href="#" class="grid__link"><b>DESTACADAS</b></a>

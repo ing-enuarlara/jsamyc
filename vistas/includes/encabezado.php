@@ -1,7 +1,7 @@
 <div class="encabezado">
     <div class="contenido__encabezado">
         <div class="conten__enca aling-left text">
-            <span>SOLO <b>ORO 18K</b> GARANTIZADO</span>
+            <span><?=$configuracion['conf_text_encabezado'];?></span>
             <a href="#" class="text__link text__menu" id="menuNav">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -18,7 +18,11 @@
                 </svg>
             </a>
         </div>
-        <div class="conten__enca centrar-texto envios"><a href="<?= RUTA ?>"><img id="imgEnca" src="https://via.placeholder.com/130x109" /></a></div>
+        <div class="conten__enca centrar-texto envios">
+            <a href="<?= RUTA ?>">
+                <img id="imgEnca" src="<?=RUTA_ADMIN.$rutaLogo;?>" alt="Logo De la pagina" height="109"/>
+            </a>
+        </div>
         <div class="conten__enca aling-right opciones">
             <a href="#" class="opciones__link opcion__searchIco" id="viewSearch2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">

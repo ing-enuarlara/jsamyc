@@ -1,6 +1,5 @@
 <?php
-    const RUTA = 'http://localhost/ing-enuarlara.co/jsamyc/';
-    const RUTA_PROYECTO= 'C:/xampp/htdocs/ing-enuarlara.co/jsamyc/';
+    include("modelo/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">

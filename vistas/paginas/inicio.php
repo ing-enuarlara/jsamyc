@@ -453,7 +453,7 @@
 </div>
 <div class="page-width wow fadeIn sectio__store-info" style="visibility: visible; animation-name: fadeIn;">
     <ul class="store-info style1">
-        <li class="item">
+        <!-- <li class="item">
             <a class="centrar-texto" href="#">
                 <i class="fa-solid fa-truck"></i>
                 <div class="text fl1">
@@ -463,7 +463,7 @@
                     </span>
                 </div>
             </a>
-        </li>
+        </li> -->
         <li class="item">
             <a class="centrar-texto" href="#">
                 <i class="fa-solid fa-star"></i>

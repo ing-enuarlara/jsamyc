@@ -285,9 +285,9 @@ header.stickyHeader {
     color: var(--encaLetras);
     padding: 0 60px;
 }
-.conten__enca .imgEnca{
+/*.conten__enca .imgEnca{
     max-width: 10%;
-}
+}*/
 .text span{
     font-size: 12px;
 }
