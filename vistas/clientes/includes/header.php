@@ -4,7 +4,7 @@
             <div class="_1fragemaf _1fragem1b _1mrl40q3 _1fragem1w _1fragem2d _1fragem0 _1fragem4 _16s97g73 _16s97g75 _16s97g7b _16s97g7d" style="--_16s97g72: 1fr; --_16s97g74: minmax(0, 1fr); --_16s97g7a: minmax(0, 1fr) minmax(auto, max-content); --_16s97g7c: minmax(0, 1fr);">
                 <div class="_1fragemaf _1fragem1b _1mrl40q3 _1fragem1z _1fragem2g _1fragem0 _1fragem4 _16s97g73 _16s97g75 _16s97g7b _16s97g7d" style="--_16s97g72: 1fr; --_16s97g74: minmax(0, 1fr); --_16s97g7a: minmax(auto, max-content) minmax(0, 1fr); --_16s97g7c: minmax(0, 1fr);">
                     <a class="s2kwpi1 _1fragemaf _1fragemat _1fragemb2 s2kwpi3 _1fragemal" href="<?= RUTA ?>">
-                        <p class="_1x52f9s1 _1fragemaf _1x52f9sp _1fragem1l">Élite Joyería</p>
+                        <p class="_1x52f9s1 _1fragemaf _1x52f9sp _1fragem1l"><?=$configuracion['conf_empresa'];?></p>
                     </a>
                     <nav class="_1fragem15 _1fragemaf" aria-label="Navegación principal">
                         <ul class="_1fragemaf _1fragem1b _1mrl40q3 _1fragem1z _1fragem2g _1fragem0 _1fragem4 _1fragem37 _1fragem3b _16s97g73 _16s97g75 _16s97g7b _16s97g7d" style="--_16s97g72: 1fr; --_16s97g74: minmax(0, 1fr); --_16s97g7a: minmax(auto, max-content) minmax(0, 1fr); --_16s97g7c: minmax(0, 1fr);">

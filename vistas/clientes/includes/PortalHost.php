@@ -35,16 +35,20 @@
             </div>
         </div>
     </div>
-    <div id="Portal2" style="opacity: 0; visibility: hidden;">
+    <?php
+        $consultaLegales = ControladorConfigPagina::ctrListarLegales(2);
+        while($legales = mysqli_fetch_array($consultaLegales, MYSQLI_BOTH)){
+    ?>
+    <div id="PortalLegal<?=$legales['pal_id'];?>" style="opacity: 0; visibility: hidden;">
         <div class="_1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragem7p _1fragem7r _1fragem8l _1fragem92 _1fragem84 _1fragem9j _1fragemae _1fragemb9 _1fragem17">
             <div class="u2pextb _1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragemae _1fragemb8 _1fragem9v _1fragemax _1fragemap _1fragemaz u2pext3"></div>
             <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
             <div class="u2pextf _1fragem7q _1fragem7s _1fragembe _1fragem17 _1fragem1d _1fragem34 _1fragemat _1fragemaq _1fragemaz u2pext3 u2pextn _1fragem10" role="dialog" aria-modal="true" aria-label="Política de reembolso" tabindex="-1">
                 <header class="u2pexth _1fragem8i _1fragem81 _1fragem9g _1fragem8z _1fragem17 _1fragem39 _1fragem4">
                     <div id="Modal10Title" class="_1fragem1g">
-                        <h1 class="_1fragemaf n8k95w2">Política de reembolso</h1>
+                        <h1 class="_1fragemaf n8k95w2"><?=$legales['pal_nombre'];?></h1>
                     </div>
-                    <button type="button" class="u2pextl _1fragem8f _1fragem8w _1fragem7y _1fragem9d _1fragemad _1fragem6w _1fragem6d _1fragem15" aria-label="closeModal" onclick="ocultar('Portal2')">
+                    <button type="button" class="u2pextl _1fragem8f _1fragem8w _1fragem7y _1fragem9d _1fragemad _1fragem6w _1fragem6d _1fragem15" aria-label="closeModal" onclick="ocultar('PortalLegal<?=$legales['pal_id'];?>')">
                         <span class="_1fragem34 _1fragem10 _1fragem9q _1fragem9p a8x1wu5 _1fragem15 a8x1wuj a8x1wum">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="a8x1wuo _1fragem15 _1fragem34 _1fragem9q _1fragem9p" focusable="false" aria-hidden="true">
                                 <path stroke-linecap="round" d="M2.8 2.8 7 7m4.2 4.2L7 7m0 0 4.2-4.2M7 7l-4.2 4.2"></path>
@@ -52,77 +56,12 @@
                         </span>
                     </button>
                 </header>
-                <iframe src="<?= RUTA ?>vistas/clientes/includes/politicas-reembolso.php" title="Política de reembolso" class="u2pextr _1fragem3j _1fragem3g _1fragem3m _1fragem3d _1fragem8q _1fragem81 _1fragem9g _1fragem8z _1fragem15"></iframe>
+                <iframe src="<?= RUTA ?>vistas/clientes/includes/legales.php?id=<?=$legales['pal_id'];?>" title="<?=$legales['pal_nombre'];?>" class="u2pextr _1fragem3j _1fragem3g _1fragem3m _1fragem3d _1fragem8q _1fragem81 _1fragem9g _1fragem8z _1fragem15"></iframe>
             </div>
             <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
         </div>
     </div>
-    <div id="Portal3" style="opacity: 0; visibility: hidden;">
-        <div class="_1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragem7p _1fragem7r _1fragem8l _1fragem92 _1fragem84 _1fragem9j _1fragemae _1fragemb9 _1fragem17">
-            <div class="u2pextb _1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragemae _1fragemb8 _1fragem9v _1fragemax _1fragemap _1fragemaz u2pext3"></div>
-            <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
-            <div class="u2pextf _1fragem7q _1fragem7s _1fragembe _1fragem17 _1fragem1d _1fragem34 _1fragemat _1fragemaq _1fragemaz u2pext3 u2pextn _1fragem10" role="dialog" aria-modal="true" aria-label="Política de envío" tabindex="-1">
-                <header class="u2pexth _1fragem8i _1fragem81 _1fragem9g _1fragem8z _1fragem17 _1fragem39 _1fragem4">
-                    <div id="Modal10Title" class="_1fragem1g">
-                        <h1 class="_1fragemaf n8k95w2">Política de envío</h1>
-                    </div>
-                    <button type="button" class="u2pextl _1fragem8f _1fragem8w _1fragem7y _1fragem9d _1fragemad _1fragem6w _1fragem6d _1fragem15" aria-label="closeModal" onclick="ocultar('Portal3')">
-                        <span class="_1fragem34 _1fragem10 _1fragem9q _1fragem9p a8x1wu5 _1fragem15 a8x1wuj a8x1wum">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="a8x1wuo _1fragem15 _1fragem34 _1fragem9q _1fragem9p" focusable="false" aria-hidden="true">
-                                <path stroke-linecap="round" d="M2.8 2.8 7 7m4.2 4.2L7 7m0 0 4.2-4.2M7 7l-4.2 4.2"></path>
-                            </svg>
-                        </span>
-                    </button>
-                </header>
-                <iframe src="<?= RUTA ?>vistas/clientes/includes/politicas-envio.php" title="Política de envío" class="u2pextr _1fragem3j _1fragem3g _1fragem3m _1fragem3d _1fragem8q _1fragem81 _1fragem9g _1fragem8z _1fragem15"></iframe>
-            </div>
-            <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
-        </div>
-    </div>
-    <div id="Portal4" style="opacity: 0; visibility: hidden;">
-        <div class="_1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragem7p _1fragem7r _1fragem8l _1fragem92 _1fragem84 _1fragem9j _1fragemae _1fragemb9 _1fragem17">
-            <div class="u2pextb _1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragemae _1fragemb8 _1fragem9v _1fragemax _1fragemap _1fragemaz u2pext3"></div>
-            <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
-            <div class="u2pextf _1fragem7q _1fragem7s _1fragembe _1fragem17 _1fragem1d _1fragem34 _1fragemat _1fragemaq _1fragemaz u2pext3 u2pextn _1fragem10" role="dialog" aria-modal="true" aria-label="Política de privacidad" tabindex="-1">
-                <header class="u2pexth _1fragem8i _1fragem81 _1fragem9g _1fragem8z _1fragem17 _1fragem39 _1fragem4">
-                    <div id="Modal10Title" class="_1fragem1g">
-                        <h1 class="_1fragemaf n8k95w2">Política de privacidad</h1>
-                    </div>
-                    <button type="button" class="u2pextl _1fragem8f _1fragem8w _1fragem7y _1fragem9d _1fragemad _1fragem6w _1fragem6d _1fragem15" aria-label="closeModal" onclick="ocultar('Portal4')">
-                        <span class="_1fragem34 _1fragem10 _1fragem9q _1fragem9p a8x1wu5 _1fragem15 a8x1wuj a8x1wum">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="a8x1wuo _1fragem15 _1fragem34 _1fragem9q _1fragem9p" focusable="false" aria-hidden="true">
-                                <path stroke-linecap="round" d="M2.8 2.8 7 7m4.2 4.2L7 7m0 0 4.2-4.2M7 7l-4.2 4.2"></path>
-                            </svg>
-                        </span>
-                    </button>
-                </header>
-                <iframe src="<?= RUTA ?>vistas/clientes/includes/politicas-privacidad.php" title="Política de privacidad" class="u2pextr _1fragem3j _1fragem3g _1fragem3m _1fragem3d _1fragem8q _1fragem81 _1fragem9g _1fragem8z _1fragem15"></iframe>
-            </div>
-            <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
-        </div>
-    </div>
-    <div id="Portal5" style="opacity: 0; visibility: hidden;">
-        <div class="_1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragem7p _1fragem7r _1fragem8l _1fragem92 _1fragem84 _1fragem9j _1fragemae _1fragemb9 _1fragem17">
-            <div class="u2pextb _1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragemae _1fragemb8 _1fragem9v _1fragemax _1fragemap _1fragemaz u2pext3"></div>
-            <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
-            <div class="u2pextf _1fragem7q _1fragem7s _1fragembe _1fragem17 _1fragem1d _1fragem34 _1fragemat _1fragemaq _1fragemaz u2pext3 u2pextn _1fragem10" role="dialog" aria-modal="true" aria-label="Términos del Servicio" tabindex="-1">
-                <header class="u2pexth _1fragem8i _1fragem81 _1fragem9g _1fragem8z _1fragem17 _1fragem39 _1fragem4">
-                    <div id="Modal10Title" class="_1fragem1g">
-                        <h1 class="_1fragemaf n8k95w2">Términos del Servicio</h1>
-                    </div>
-                    <button type="button" class="u2pextl _1fragem8f _1fragem8w _1fragem7y _1fragem9d _1fragemad _1fragem6w _1fragem6d _1fragem15" aria-label="closeModal" onclick="ocultar('Portal5')">
-                        <span class="_1fragem34 _1fragem10 _1fragem9q _1fragem9p a8x1wu5 _1fragem15 a8x1wuj a8x1wum">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="a8x1wuo _1fragem15 _1fragem34 _1fragem9q _1fragem9p" focusable="false" aria-hidden="true">
-                                <path stroke-linecap="round" d="M2.8 2.8 7 7m4.2 4.2L7 7m0 0 4.2-4.2M7 7l-4.2 4.2"></path>
-                            </svg>
-                        </span>
-                    </button>
-                </header>
-                <iframe src="<?= RUTA ?>vistas/clientes/includes/terminos-servicios.php" title="Términos del Servicio" class="u2pextr _1fragem3j _1fragem3g _1fragem3m _1fragem3d _1fragem8q _1fragem81 _1fragem9g _1fragem8z _1fragem15"></iframe>
-            </div>
-            <button class="_1fragemae _1fragemac _1fragem9v" aria-hidden="true"></button>
-        </div>
-    </div>
+    <?php }?>
     <div id="Portal6" style="opacity: 0; visibility: hidden;">
         <div class="_1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragem7p _1fragem7r _1fragem8l _1fragem92 _1fragem84 _1fragem9j _1fragemae _1fragemb9 _1fragem17 u2pext2">
             <div class="u2pextb _1fragem64 _1fragem6n _1fragem5l _1fragem76 _1fragemae _1fragemb8 _1fragem9v _1fragemax _1fragemap _1fragemaz u2pext3"></div>

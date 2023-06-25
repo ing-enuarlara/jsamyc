@@ -1,5 +1,11 @@
 <?php
-    include("../../modelo/conexion.php");
+    const RUTA = 'http://localhost/ing-enuarlara.co/jsamyc/';
+    const RUTA_PROYECTO = 'C:/xampp/htdocs/ing-enuarlara.co/jsamyc/';
+
+    require_once RUTA_PROYECTO."controladores/configPagina.controlador.php";
+    require_once RUTA_PROYECTO."modelo/configPagina.modelo.php";
+
+    include(RUTA_PROYECTO."vistas/includes/configPagina.php");
 ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1">
@@ -25,4 +31,4 @@
         src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
     }
 </style>
-<title data-react-html="true">Pedidos - Élite Joyería - Cuenta</title>
+<title data-react-html="true">Pedidos - <?=$configuracion['conf_empresa'];?> - Cuenta</title>

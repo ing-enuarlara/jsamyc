@@ -7,26 +7,16 @@
                         <div class="KjdTb">
                             <div class="_1fragem17 _1fragemaf _1fragem38">
                                 <div class="_5uqybw2 _1fragem17 _1fragem9r _1fragem1w _1fragem2d _1fragem0 _1fragem4 _1fragem38">
-                                    <button type="button" class="QT4by xk8nK eVFmT janiy mRJ8x" onclick="mostrar('Portal2')">
+                                    <?php
+                                        $consultaLegales = ControladorConfigPagina::ctrListarLegales(2);
+                                        while($legales = mysqli_fetch_array($consultaLegales, MYSQLI_BOTH)){
+                                    ?>
+                                    <button type="button" class="QT4by xk8nK eVFmT janiy mRJ8x" onclick="mostrar('PortalLegal<?=$legales['pal_id'];?>')">
                                         <span class="AjwsM">
-                                            <span class="_19gi7yt0 _19gi7ytc _1fragem1i">Política de reembolso</span>
+                                            <span class="_19gi7yt0 _19gi7ytc _1fragem1i"><?=$legales['pal_nombre'];?></span>
                                         </span>
                                     </button>
-                                    <button type="button" class="QT4by xk8nK eVFmT janiy mRJ8x" onclick="mostrar('Portal3')">
-                                        <span class="AjwsM">
-                                            <span class="_19gi7yt0 _19gi7ytc _1fragem1i">Política de envío</span>
-                                        </span>
-                                    </button>
-                                    <button type="button" class="QT4by xk8nK eVFmT janiy mRJ8x" onclick="mostrar('Portal4')">
-                                        <span class="AjwsM">
-                                            <span class="_19gi7yt0 _19gi7ytc _1fragem1i">Política de privacidad</span>
-                                        </span>
-                                    </button>
-                                    <button type="button" class="QT4by xk8nK eVFmT janiy mRJ8x" onclick="mostrar('Portal5')">
-                                        <span class="AjwsM">
-                                            <span class="_19gi7yt0 _19gi7ytc _1fragem1i">Términos del Servicio</span>
-                                        </span>
-                                    </button>
+                                    <?php }?>
                                     <a class="s2kwpi1 _1fragemaf _1fragemat _1fragemb2 s2kwpi2 _1fragemam" href="mailto:elitejoyeria18k@gmail.com?subject=Contactar%20desde%20la%20tienda%20online%20%C3%89lite%20Joyer%C3%ADa" target="_blank" rel="noopener noreferrer">
                                         <span class="_19gi7yt0 _19gi7ytc _1fragem1i">Contáctanos</span>
                                     </a>

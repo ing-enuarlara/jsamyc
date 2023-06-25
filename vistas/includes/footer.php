@@ -84,10 +84,12 @@
             <div id="nav_menu-1561381058776" class="footer-block__item medium-up--one-fifth footer-links">
                 <h4 class="h4 h4Flex" id="Leg">Legales <i id="plusLeg" class="fa-solid fa-plus"></i></h4>
                 <ul id="menLeg">
-                    <li><a href="<?=RUTA?>politica-privacidad">Política de Privacidad</a></li>
-                    <li><a href="<?=RUTA?>terminos-servicios">Términos del Servicio</a></li>
-                    <li><a href="<?=RUTA?>politica-envio">Política de Envíos</a></li>
-                    <li><a href="<?=RUTA?>politica-garantia">Política de Garantías</a></li>
+                    <?php
+                        $consultaLegales = ControladorConfigPagina::ctrListarLegales(2);
+                        while($legales = mysqli_fetch_array($consultaLegales, MYSQLI_BOTH)){
+                    ?>
+                    <li><a href="<?=RUTA?>legales/<?=$legales['pal_id'];?>"><?=$legales['pal_nombre'];?></a></li>
+                    <?php }?>
                 </ul>
             </div>
         </div>
