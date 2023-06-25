@@ -59,109 +59,27 @@
                     <div class="widget-title">Categorias</div>
                     <div class="widget-content">
                         <ul class="sidebar_cate">
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="<?=RUTA?>tienda/cadenas" class="site-nav lvl-1">Cadenas</a>
-                                <ul class="subLinks">
-                                    <li class="lvl-2">
-                                        <a href="/collections/cadenas-40cm" class="site-nav lvl-2">Cadenas 40cm</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/cadenas-45cm" class="site-nav lvl-2">Cadenas 45cm</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/cadenas-50cm" class="site-nav lvl-2">Cadenas 50cm</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/cadenas-55cm" class="site-nav lvl-2">Cadenas 55cm</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/cadenas-60cm" class="site-nav lvl-2">Cadenas 60cm</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/cadenas-65cm" class="site-nav lvl-2">Cadenas 65cm</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/cadenas-70cm" class="site-nav lvl-2">Cadenas 70cm</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/dijes" class="site-nav lvl-1">Dijes</a>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/rosarios" class="site-nav lvl-1">Rosarios</a>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/gargantillas" class="site-nav lvl-1">Gargantillas</a>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/anillos" class="site-nav lvl-1">Anillos</a>
-                                <ul class="subLinks">
-                                    <li class="lvl-2">
-                                        <a href="/collections/anillos-15-anos" class="site-nav lvl-2">Anillos 15 Años</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/anillos-de-compromiso" class="site-nav lvl-2">Anillos de Compromiso</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/argollas-de-matrimonio" class="site-nav lvl-2">Argollas de Matrimonio</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/anillos-mujer" class="site-nav lvl-2">Anillos Mujer</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/anillos-hombre" class="site-nav lvl-2">Anillos Hombre</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/pulseras" class="site-nav lvl-1">Pulseras</a>
-                                <ul class="subLinks">
-                                    <li class="lvl-2">
-                                        <a href="/collections/pulsos" class="site-nav lvl-2">Pulsos</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/pulseras-con-hilo" class="site-nav lvl-2">Pulseras Tejidas</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/pulseras-bebe" class="site-nav lvl-2">Pulseras Bebé</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/aros" class="site-nav lvl-1">Aros</a>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/aretes" class="site-nav lvl-1">Aretes</a>
-                                <ul class="subLinks">
-                                    <li class="lvl-2">
-                                        <a href="/collections/candongas" class="site-nav lvl-2">Candongas</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/topos" class="site-nav lvl-2">Topos</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/tobilleras" class="site-nav lvl-1">Tobilleras</a>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/herrajes" class="site-nav lvl-1">Herrajes</a>
-                            </li>
-                            <li class="grid__item grid__item-prod lvl-1 ">
-                                <a href="/collections/bolas" class="site-nav lvl-1">Bolas</a>
-                                <ul class="subLinks">
-                                    <li class="lvl-2">
-                                        <a href="/collections/bolas-diamantadas" class="site-nav lvl-2">Diamantadas</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/bolas-lisas" class="site-nav lvl-2">Lisas</a>
-                                    </li>
-                                    <li class="lvl-2">
-                                        <a href="/collections/neoros" class="site-nav lvl-2">Neoros</a>
-                                    </li>
-                                </ul>
-                            </li>
+                            <?php
+                                $consultaCategorias = ControladorComercial::ctrCategorias(2);
+                                while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
+                                    $consultaSubCategorias = ControladorComercial::ctrSubCategorias($datosCategorias['ccat_id']);
+                                    $numSubCategorias=mysqli_num_rows($consultaSubCategorias);
+                            ?>
+                                <li class="grid__item grid__item-prod lvl-1 ">
+                                    <a href="<?=RUTA?>tienda/<?=$datosCategorias['ccat_id']?>" class="site-nav lvl-1"><?=$datosCategorias['ccat_nombre']?></a>
+                                    <?php if($numSubCategorias>0){?>
+                                        <ul class="subLinks">
+                                            <?php
+                                                while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
+                                            ?>
+                                                <li class="lvl-2">
+                                                    <a href="<?=RUTA?>tienda/<?=$datosCategorias['ccat_id']."/".$datosSubCategorias['cmar_id'];?>" class="site-nav lvl-2"><?=$datosSubCategorias['cmar_nombre'];?></a>
+                                                </li>
+                                            <?php }?>
+                                        </ul>
+                                    <?php }?>
+                                </li>
+                            <?php }?>
                         </ul>
                     </div>
                 </div>
