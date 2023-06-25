@@ -10,7 +10,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$configuracion['conf_empresa'];?> || Descripción</title>
+    <title><?=$configuracion['conf_empresa'];?> || <?=$configuracion['conf_descripcion_corta'];?></title>
+    <meta name="description" content="<?=$configuracion['conf_descripcion_pagina'];?>">
+    <meta name="keywords" content="<?=$configuracion['conf_palabras_claves'];?>"/>
 
     <!-- NORMALIZE -->
     <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/normalize.css">
