@@ -14,4 +14,18 @@
                 return $configuracionColor;
                 exit();
         }
+
+        static public function ctrListarLegales($idInsti){
+                $consultaLegales=ModeloConfigPagina::mdlListarLegales($idInsti);
+                
+                return $consultaLegales;
+                exit();
+        }
+
+        static public function ctrDatosLegales($idLegal){
+                $datosLegal=ModeloConfigPagina::mdlDatosLegales($idLegal);
+                
+                return $datosLegal;
+                exit();
+        }
     }

@@ -18,4 +18,19 @@
             return $configuracionColor;
             exit();
         }
+
+        static public function mdlListarLegales($idInsti){
+            $consultaLegales=Conexion::conexionBdPaginaWeb()->query("SELECT * FROM pagina_legales WHERE pal_id_empresa=$idInsti");
+
+            return $consultaLegales;
+            exit();
+        }
+
+        static public function mdlDatosLegales($idLegal){
+            $consultaLegales=Conexion::conexionBdPaginaWeb()->query("SELECT * FROM pagina_legales WHERE pal_id=$idLegal");
+            $datosLegal = mysqli_fetch_array($consultaLegales, MYSQLI_BOTH);
+
+            return $datosLegal;
+            exit();
+        }
     }
