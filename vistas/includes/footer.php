@@ -63,12 +63,12 @@
             <div id="nav_menu-1561381006670" class="footer-block__item medium-up--one-quarter footer-links">
                 <h4 class="h4 h4Flex" id="Cat">Categorías <i id="plusCat" class="fa-solid fa-plus"></i></h4>
                 <ul id="menCat">
-                    <li><a href="<?=RUTA?>tienda/cadenas">Cadenas</a></li>
-                    <li><a href="<?=RUTA?>tienda/dijes">Dijes</a></li>
-                    <li><a href="<?=RUTA?>tienda/aretes">Aretes</a></li>
-                    <li><a href="<?=RUTA?>tienda/pulseras">Pulseras</a></li>
-                    <li><a href="<?=RUTA?>tienda/anillos">Anillos</a></li>
-                    <li><a href="<?=RUTA?>tienda/tobilleras">Tobilleras</a></li>
+                    <?php
+                        $consultaCategoriasFooter = ControladorComercial::ctrCategoriasFooter(2);
+                        while($datosCategoriasFooter = mysqli_fetch_array($consultaCategoriasFooter, MYSQLI_BOTH)){
+                    ?>
+                    <li><a href="<?=RUTA?>tienda/<?=$datosCategoriasFooter['ccat_id'];?>"><?=$datosCategoriasFooter['ccat_nombre'];?></a></li>
+                    <?php }?>
                 </ul>
             </div>
             <div id="nav_menu-1561381031703" class="footer-block__item medium-up--one-fifth footer-links">

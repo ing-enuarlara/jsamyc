@@ -27,7 +27,7 @@ function ocultar($id){
 function activar($id){
     document.getElementById($id).classList.toggle("active");
 }
-function plusMinus($id,$menu){
+function plus($id,$menu){
     document.getElementById($id).classList.toggle("fa-plus");
     document.getElementById($id).classList.toggle("fa-minus");
     document.getElementById($menu).classList.toggle("block");
@@ -39,34 +39,19 @@ document.getElementById("closemmn").onclick=function(){
     activar("mobile__nav");
 }
 document.getElementById("plusD").onclick=function(){
-    plusMinus("plusD","menuDes");
+    plus("plusD","menuDes");
 }
 document.getElementById("plusDa").onclick=function(){
-    plusMinus("plusDa","menuDest");
+    plus("plusDa","menuDest");
 }
 document.getElementById("plusEx").onclick=function(){
-    plusMinus("plusEx","menuEX");
+    plus("plusEx","menuEX");
 }
 document.getElementById("plusMj").onclick=function(){
-    plusMinus("plusMj","menuMj");
+    plus("plusMj","menuMj");
 }
-document.getElementById("plusC").onclick=function(){
-    plusMinus("plusC","menuCat");
-}
-document.getElementById("plusCad").onclick=function(){
-    plusMinus("plusCad","menuCad");
-}
-document.getElementById("plusAn").onclick=function(){
-    plusMinus("plusAn","menuAn");
-}
-document.getElementById("plusPu").onclick=function(){
-    plusMinus("plusPu","menuPu");
-}
-document.getElementById("plusAr").onclick=function(){
-    plusMinus("plusAr","menuAr");
-}
-document.getElementById("plusBo").onclick=function(){
-    plusMinus("plusBo","menuBo");
+document.getElementById("plusCategoria").onclick=function(){
+    plus("plusCategoria","menuCategoria");
 }
 document.getElementById("navCar").onclick=function(){
     activar("cart_drawer");
@@ -87,13 +72,13 @@ document.getElementById("setting").onclick=function(){
     activar("settingsBox");
 }
 document.getElementById("Cat").onclick=function(){
-    plusMinus("plusCat","menCat");
+    plus("plusCat","menCat");
 }
 document.getElementById("Usu").onclick=function(){
-    plusMinus("plusUsu","menUsu");
+    plus("plusUsu","menUsu");
 }
 document.getElementById("Leg").onclick=function(){
-    plusMinus("plusLeg","menLeg");
+    plus("plusLeg","menLeg");
 }
 document.getElementById("openFilter").onclick=function(){
     activar("filterbar");

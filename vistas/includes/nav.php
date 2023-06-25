@@ -16,181 +16,77 @@
                     <li class="grid__item grid__item-prod">
                         <a href="#" class="grid__link"><b>DESTACADAS</b></a>
                         <ul class="sublink">
+                            <?php
+                                $consultaCategorias = ControladorComercial::ctrCategoriasDestacado(2);
+                                while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
+                            ?>
                             <li class="sublink__2">
-                                <a href="<?=RUTA?>tienda/cadenas">Cadenas</a>
+                                <a href="<?=RUTA?>tienda/<?=$datosCategorias['ccat_id'];?>"><?=$datosCategorias['ccat_nombre'];?></a>
                             </li>
-                            <li class="sublink__2">
-                                <a href="#">Anillos</a>
-                            </li>
-                            <li class="sublink__2">
-                                <a href="#">Pulseras</a>
-                            </li>
-                            <li class="sublink__2">
-                                <a href="#">Aretes</a>
-                            </li>
+                            <?php }?>
                         </ul>
                     </li>
                     <li class="grid__item grid__item-prod">
                         <a href="#" class="grid__link"><b>EXCLUSIVAS</b></a>
                         <ul class="sublink">
+                            <?php
+                                $consultaSubCategorias = ControladorComercial::ctrSubCategoriasExclusivas(2);
+                                while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
+                            ?>
                             <li class="sublink__2">
-                                <a href="#">Pulseras Bebé</a>
+                                <a href="<?=RUTA?>tienda/<?=$datosSubCategorias['cmar_categoria']."/".$datosSubCategorias['cmar_id'];?>"><?=$datosSubCategorias['cmar_nombre'];?></a>
                             </li>
-                            <li class="sublink__2">
-                                <a href="#">Anillos 15 Años</a>
-                            </li>
-                            <li class="sublink__2">
-                                <a href="#">Anillos de Compromiso</a>
-                            </li>
-                            <li class="sublink__2">
-                                <a href="#">Argollas de Matrimonio</a>
-                            </li>
+                            <?php }?>
                         </ul>
                     </li>
                     <li class="grid__item grid__item-prod">
                         <a href="#" class="grid__link"><b>MÁS JOYAS</b></a>
                         <ul class="sublink">
+                            <?php
+                                $consultaSubCategorias = ControladorComercial::ctrSubCategoriasMasJoyas(2);
+                                while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
+                            ?>
                             <li class="sublink__2">
-                                <a href="#">Pulsos</a>
+                                <a href="<?=RUTA?>tienda/<?=$datosSubCategorias['cmar_categoria']."/".$datosSubCategorias['cmar_id'];?>"><?=$datosSubCategorias['cmar_nombre'];?></a>
                             </li>
-                            <li class="sublink__2">
-                                <a href="#">Aros</a>
-                            </li>
-                            <li class="sublink__2">
-                                <a href="#">Anillos Mujer</a>
-                            </li>
-                            <li class="sublink__2">
-                                <a href="#">Anillos Hombres</a>
-                            </li>
+                            <?php }?>
                         </ul>
                     </li>
                 </ul>
             </div>
         </li>
-        <li class="nav_items" onmousemove="mostrar('menucate1')" onmouseout="ocultar('menucate1')">
+        <li class="nav_items" onmousemove="mostrar('categorias')" onmouseout="ocultar('categorias')">
             <a href="#">
                 CATEGORÍAS
                 <i class="fa-solid fa-caret-down"></i>
             </a>
-            <ul class="menucate menusublink" id="menucate1">
-                <li class="" onmousemove="mostrar('menucate2')" onmouseout="ocultar('menucate2')">
-                    <a href="<?=RUTA?>tienda/cadenas" class="submenucate">
-                        Cadenas
-                        <i class="fa-solid fa-angle-right"></i>
+            <ul class="menucate menusublink" id="categorias">
+                <?php
+                    $consultaCategorias = ControladorComercial::ctrCategorias(2);
+                    while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
+                        $consultaSubCategorias = ControladorComercial::ctrSubCategorias($datosCategorias['ccat_id']);
+                        $numSubCategorias=mysqli_num_rows($consultaSubCategorias);
+                ?>
+                <li class="" onmousemove="mostrar('sub-categorias<?=$datosCategorias['ccat_id'];?>')" onmouseout="ocultar('sub-categorias<?=$datosCategorias['ccat_id'];?>')">
+                    <a href="<?=RUTA?>tienda/<?=$datosCategorias['ccat_id'];?>" class="submenucate">
+                        <?=$datosCategorias['ccat_nombre'];?>
+                        <?php if($numSubCategorias>0){?>
+                            <i class="fa-solid fa-angle-right"></i>
+                        <?php }?>
                     </a>
-                    <ul class="menucate menusublink" id="menucate2">
-                        <li class="">
-                            <a href="#">Cadenas 40cm</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Cadenas 45cm</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Cadenas 50cm</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Cadenas 55cm</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Cadenas 60cm</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Cadenas 65cm</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Cadenas 70cm</a>
-                        </li>
-                    </ul>
+                    <?php if($numSubCategorias>0){?>
+                        <ul class="menucate menusublink" id="sub-categorias<?=$datosCategorias['ccat_id'];?>">
+                            <?php
+                                while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
+                            ?>
+                                <li class="">
+                                    <a href="<?=RUTA?>tienda/<?=$datosCategorias['ccat_id']."/".$datosSubCategorias['cmar_id'];?>"><?=$datosSubCategorias['cmar_nombre'];?></a>
+                                </li>
+                            <?php }?>
+                        </ul>
+                    <?php }?>
                 </li>
-                <li class="">
-                    <a href="#">Dijes</a>
-                </li>
-                <li class="">
-                    <a href="#">Rosarios</a>
-                </li>
-                <li class="">
-                    <a href="#">Gargantillas</a>
-                </li>
-                <li class="" onmousemove="mostrar('menucate3')" onmouseout="ocultar('menucate3')">
-                    <a href="#" class="submenucate">
-                        Anillos
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                    <ul class="menucate menusublink" id="menucate3">
-                        <li class="">
-                            <a href="#">Anillos 15 Años</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Anillos de Compromiso</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Argollas de Matrimonio</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Anillos Mujer</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Anillos Hombre</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="" onmousemove="mostrar('menucate4')" onmouseout="ocultar('menucate4')">
-                    <a href="#" class="submenucate">
-                        Pulseras
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                    <ul class="menucate menusublink" id="menucate4">
-                        <li class="">
-                            <a href="#">Pulsos</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Pulseras Tejidas</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Pulseras Bebé</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="">
-                    <a href="#">Aros</a>
-                </li>
-                <li class="" onmousemove="mostrar('menucate5')" onmouseout="ocultar('menucate5')">
-                    <a href="#" class="submenucate">
-                        Aretes
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                    <ul class="menucate menusublink" id="menucate5">
-                        <li class="">
-                            <a href="#">Candongas</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Topos</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="">
-                    <a href="#">Tobilleras</a>
-                </li>
-                <li class="">
-                    <a href="#">Herrajes</a>
-                </li>
-                <li class="" onmousemove="mostrar('menucate6')" onmouseout="ocultar('menucate6')">
-                    <a href="#" class="submenucate">
-                        Bolas
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                    <ul class="menucate menusublink" id="menucate6">
-                        <li class="">
-                            <a href="#">Diamantadas</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Lisas</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Neoros</a>
-                        </li>
-                    </ul>
-                </li>
+                <?php }?>
             </ul>
         </li>
         <li class="nav_items">

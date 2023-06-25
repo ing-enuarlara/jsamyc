@@ -15,26 +15,14 @@
                         <i id="plusDa" class="fa-solid fa-plus"></i>
                     </a>
                     <ul id="menuDest">
+                        <?php
+                            $consultaCategorias = ControladorComercial::ctrCategoriasDestacado(2);
+                            while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
+                        ?>
                         <li>
-                            <a href="<?=RUTA?>tienda/cadenas">
-                                CADENAS
-                            </a>
+                            <a href="<?=RUTA?>tienda/<?=$datosCategorias['ccat_id'];?>"><?=$datosCategorias['ccat_nombre'];?></a>
                         </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                PULSERAS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ARETES
-                            </a>
-                        </li>
+                        <?php }?>
                     </ul>
                 </li>
                 <li>
@@ -43,26 +31,14 @@
                         <i id="plusEx" class="fa-solid fa-plus"></i>
                     </a>
                     <ul id="menuEX">
+                        <?php
+                            $consultaSubCategorias = ControladorComercial::ctrSubCategoriasExclusivas(2);
+                            while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
+                        ?>
                         <li>
-                            <a href="#">
-                                PULSERAS BEBÉ
-                            </a>
+                            <a href="<?=RUTA?>tienda/<?=$datosSubCategorias['cmar_categoria']."/".$datosSubCategorias['cmar_id'];?>"><?=$datosSubCategorias['cmar_nombre'];?></a>
                         </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS 15 AÑOS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS DE COMPROMISO
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ARGOLLAS DE MATRIMONIO
-                            </a>
-                        </li>
+                        <?php }?>
                     </ul>
                 </li>
                 <li>
@@ -71,26 +47,14 @@
                         <i id="plusMj" class="fa-solid fa-plus"></i>
                     </a>
                     <ul id="menuMj">
+                        <?php
+                            $consultaSubCategorias = ControladorComercial::ctrSubCategoriasMasJoyas(2);
+                            while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
+                        ?>
                         <li>
-                            <a href="#">
-                                PULSOS
-                            </a>
+                            <a href="<?=RUTA?>tienda/<?=$datosSubCategorias['cmar_categoria']."/".$datosSubCategorias['cmar_id'];?>"><?=$datosSubCategorias['cmar_nombre'];?></a>
                         </li>
-                        <li>
-                            <a href="#">
-                                AROS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS MUJER
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS HOMBRE
-                            </a>
-                        </li>
+                        <?php }?>
                     </ul>
                 </li>
             </ul>
@@ -98,186 +62,49 @@
         <li>
             <a href="#">
                 CATEGORÍAS
-                <i id="plusC" class="fa-solid fa-plus"></i>
+                <i id="plusCategoria" class="fa-solid fa-plus"></i>
             </a>
-            <ul id="menuCat">
-                <li>
-                    <a href="#">
-                        CADENAS
-                        <i id="plusCad" class="fa-solid fa-plus"></i>
-                    </a>
-                    <ul id="menuCad">
-                        <li>
-                            <a href="#">
-                                CADENAS 40CM
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CADENAS 45CM
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CADENAS 50CM
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CADENAS 55CM
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CADENAS 60CM
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CADENAS 65CM
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CADENAS 70CM
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        DIJES
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        ROSARIOS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        GARGANTILLAS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        ANILLOS
-                        <i id="plusAn" class="fa-solid fa-plus"></i>
-                    </a>
-                    <ul id="menuAn">
-                        <li>
-                            <a href="#">
-                                ANILLOS 15 AÑOS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS DE COMPROMISO
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                AEGOLLAS DE MATRIMONIO
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS MUJER
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ANILLOS HOMBRE
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        PULSERAS
-                        <i id="plusPu" class="fa-solid fa-plus"></i>
-                    </a>
-                    <ul id="menuPu">
-                        <li>
-                            <a href="#">
-                                PULSOS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                PULSERAS TEJIDAS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                PULSERAS BEBÉ
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        AROS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        ARETES
-                        <i id="plusAr" class="fa-solid fa-plus"></i>
-                    </a>
-                    <ul id="menuAr">
-                        <li>
-                            <a href="#">
-                                CANDONGAS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                TOPOS
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        TOBILLERAS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        HERRAJES
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        BOLAS
-                        <i id="plusBo" class="fa-solid fa-plus"></i>
-                    </a>
-                    <ul id="menuBo">
-                        <li>
-                            <a href="#">
-                                DIAMANTADAS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                LISAS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                NEOROS
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+            <ul id="menuCategoria">
+                <?php
+                    $consultaCategorias = ControladorComercial::ctrCategorias(2);
+                    while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
+                        $consultaSubCategorias = ControladorComercial::ctrSubCategorias($datosCategorias['ccat_id']);
+                        $numSubCategorias=mysqli_num_rows($consultaSubCategorias);
+
+                        $rutaCategoria= RUTA."tienda/".$datosCategorias['ccat_id'];
+                        if($numSubCategorias>0){
+                            $rutaCategoria="#";
+                        }
+                ?>
+                    <li>
+                        <a href="<?=$rutaCategoria?>">
+                            <?=$datosCategorias['ccat_nombre'];?>
+                            <?php if($numSubCategorias>0){?>
+                                <i id="plusSubCategoria<?=$datosCategorias['ccat_id'];?>" class="fa-solid fa-plus" onclick="plus('plusSubCategoria<?=$datosCategorias['ccat_id'];?>','menuSubCategoria<?=$datosCategorias['ccat_id'];?>')"></i>
+                            <?php }?>
+                        </a>
+                        <?php if($numSubCategorias>0){?>
+                            <ul id="menuSubCategoria<?=$datosCategorias['ccat_id'];?>">
+                                <?php
+                                    while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
+                                ?>
+                                    <li>
+                                        <a href="<?=RUTA?>tienda/<?=$datosCategorias['ccat_id']."/".$datosSubCategorias['cmar_id'];?>"><?=$datosSubCategorias['cmar_nombre'];?></a>
+                                    </li>
+                                <?php }?>
+                            </ul>
+                        <?php }?>
+                    </li>
+                <?php }?>
             </ul>
         </li>
         <li><a href="<?=RUTA?>contacto">CONTACTO</a></li>
         <li></li>
         <li></li>
         <li></li>
-        <li><a href="<?=RUTA?>acceso">ACCESO</a></li>
         <li><a href="<?=RUTA?>deseos">LISTA DE DESEOS</a></li>
+        <li><a href="<?=RUTA?>acceso">ACCESO</a></li>
+        <li><a href="<?=RUTA?>vistas/clientes/">Mi cuenta</a></li>
+        <li><a href=""><b>Cerrar sesión</b></a></li>
     </ul>
 </div>
