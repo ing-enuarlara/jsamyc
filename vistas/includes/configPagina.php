@@ -1,5 +1,5 @@
 <?php
-    $configuracion = ControladorConfigPagina::ctrConfigPagina(2);
+    $configuracion = ControladorConfigPagina::ctrConfigPagina();
 
     $default = 'files/default.png';
     $rutaLogo = $default;

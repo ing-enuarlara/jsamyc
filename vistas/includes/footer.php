@@ -64,7 +64,7 @@
                 <h4 class="h4 h4Flex" id="Cat">Categorías <i id="plusCat" class="fa-solid fa-plus"></i></h4>
                 <ul id="menCat">
                     <?php
-                        $consultaCategoriasFooter = ControladorComercial::ctrCategoriasFooter(2);
+                        $consultaCategoriasFooter = ControladorComercial::ctrCategoriasFooter();
                         while($datosCategoriasFooter = mysqli_fetch_array($consultaCategoriasFooter, MYSQLI_BOTH)){
                     ?>
                     <li><a href="<?=RUTA?>tienda/<?=$datosCategoriasFooter['ccat_id'];?>"><?=$datosCategoriasFooter['ccat_nombre'];?></a></li>
@@ -85,7 +85,7 @@
                 <h4 class="h4 h4Flex" id="Leg">Legales <i id="plusLeg" class="fa-solid fa-plus"></i></h4>
                 <ul id="menLeg">
                     <?php
-                        $consultaLegales = ControladorConfigPagina::ctrListarLegales(2);
+                        $consultaLegales = ControladorConfigPagina::ctrListarLegales();
                         while($legales = mysqli_fetch_array($consultaLegales, MYSQLI_BOTH)){
                     ?>
                     <li><a href="<?=RUTA?>legales/<?=$legales['pal_id'];?>"><?=$legales['pal_nombre'];?></a></li>

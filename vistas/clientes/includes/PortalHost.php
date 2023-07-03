@@ -36,7 +36,7 @@
         </div>
     </div>
     <?php
-        $consultaLegales = ControladorConfigPagina::ctrListarLegales(2);
+        $consultaLegales = ControladorConfigPagina::ctrListarLegales();
         while($legales = mysqli_fetch_array($consultaLegales, MYSQLI_BOTH)){
     ?>
     <div id="PortalLegal<?=$legales['pal_id'];?>" style="opacity: 0; visibility: hidden;">

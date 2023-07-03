@@ -16,7 +16,7 @@
                     </a>
                     <ul id="menuDest">
                         <?php
-                            $consultaCategorias = ControladorComercial::ctrCategoriasDestacado(2);
+                            $consultaCategorias = ControladorComercial::ctrCategoriasDestacado();
                             while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
                         ?>
                         <li>
@@ -32,7 +32,7 @@
                     </a>
                     <ul id="menuEX">
                         <?php
-                            $consultaSubCategorias = ControladorComercial::ctrSubCategoriasExclusivas(2);
+                            $consultaSubCategorias = ControladorComercial::ctrSubCategoriasExclusivas();
                             while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
                         ?>
                         <li>
@@ -48,7 +48,7 @@
                     </a>
                     <ul id="menuMj">
                         <?php
-                            $consultaSubCategorias = ControladorComercial::ctrSubCategoriasMasJoyas(2);
+                            $consultaSubCategorias = ControladorComercial::ctrSubCategoriasMasJoyas();
                             while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
                         ?>
                         <li>
@@ -66,7 +66,7 @@
             </a>
             <ul id="menuCategoria">
                 <?php
-                    $consultaCategorias = ControladorComercial::ctrCategorias(2);
+                    $consultaCategorias = ControladorComercial::ctrCategorias();
                     while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
                         $consultaSubCategorias = ControladorComercial::ctrSubCategorias($datosCategorias['ccat_id']);
                         $numSubCategorias=mysqli_num_rows($consultaSubCategorias);

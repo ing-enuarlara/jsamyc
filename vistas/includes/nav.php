@@ -17,7 +17,7 @@
                         <a href="#" class="grid__link"><b>DESTACADAS</b></a>
                         <ul class="sublink">
                             <?php
-                                $consultaCategorias = ControladorComercial::ctrCategoriasDestacado(2);
+                                $consultaCategorias = ControladorComercial::ctrCategoriasDestacado();
                                 while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
                             ?>
                             <li class="sublink__2">
@@ -30,7 +30,7 @@
                         <a href="#" class="grid__link"><b>EXCLUSIVAS</b></a>
                         <ul class="sublink">
                             <?php
-                                $consultaSubCategorias = ControladorComercial::ctrSubCategoriasExclusivas(2);
+                                $consultaSubCategorias = ControladorComercial::ctrSubCategoriasExclusivas();
                                 while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
                             ?>
                             <li class="sublink__2">
@@ -43,7 +43,7 @@
                         <a href="#" class="grid__link"><b>MÁS JOYAS</b></a>
                         <ul class="sublink">
                             <?php
-                                $consultaSubCategorias = ControladorComercial::ctrSubCategoriasMasJoyas(2);
+                                $consultaSubCategorias = ControladorComercial::ctrSubCategoriasMasJoyas();
                                 while($datosSubCategorias = mysqli_fetch_array($consultaSubCategorias, MYSQLI_BOTH)){
                             ?>
                             <li class="sublink__2">
@@ -62,7 +62,7 @@
             </a>
             <ul class="menucate menusublink" id="categorias">
                 <?php
-                    $consultaCategorias = ControladorComercial::ctrCategorias(2);
+                    $consultaCategorias = ControladorComercial::ctrCategorias();
                     while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
                         $consultaSubCategorias = ControladorComercial::ctrSubCategorias($datosCategorias['ccat_id']);
                         $numSubCategorias=mysqli_num_rows($consultaSubCategorias);

@@ -8,7 +8,7 @@
                             <div class="_1fragem17 _1fragemaf _1fragem38">
                                 <div class="_5uqybw2 _1fragem17 _1fragem9r _1fragem1w _1fragem2d _1fragem0 _1fragem4 _1fragem38">
                                     <?php
-                                        $consultaLegales = ControladorConfigPagina::ctrListarLegales(2);
+                                        $consultaLegales = ControladorConfigPagina::ctrListarLegales();
                                         while($legales = mysqli_fetch_array($consultaLegales, MYSQLI_BOTH)){
                                     ?>
                                     <button type="button" class="QT4by xk8nK eVFmT janiy mRJ8x" onclick="mostrar('PortalLegal<?=$legales['pal_id'];?>')">
