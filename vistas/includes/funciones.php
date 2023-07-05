@@ -7,6 +7,9 @@
             if(!empty($pagina[1])){
                 $paginaUrl=$pagina[0]."/".$pagina[1];
             }
+            if(!empty($pagina[2])){
+                $paginaUrl=$pagina[0]."/".$pagina[1]."/".$pagina[2];
+            }
         }
         return $paginaUrl;
     }
@@ -32,6 +35,21 @@
                         $idLegal=$pagina[1];
                         $legales = ControladorConfigPagina::ctrDatosLegales($idLegal);
                         $nombrePagina=$legales['pal_nombre'];
+                    }
+
+                    if($pagina[0]=='tienda'){
+                        $datosCategorias = ControladorComercial::ctrDatosCategorias($pagina[1]);
+                        $nombrePagina=$datosCategorias['ccat_nombre'];
+                    }
+                }
+            }
+            if(!empty($pagina[2])){
+                $nombrePagina=$pagina[2];
+                
+                if(is_numeric($pagina[2])){
+                    if($pagina[0]=='tienda'){
+                        $datosSubCategorias = ControladorComercial::ctrDatosSubCategorias($pagina[2]);
+                        $nombrePagina=$datosSubCategorias['cmar_nombre'];
                     }
                 }
             }
