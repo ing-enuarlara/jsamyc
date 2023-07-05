@@ -57,7 +57,7 @@
         if(op==7){
             ordenar=datos.value;
         }
-        window.location.href=url+'index.php?pagina='+pagina+'&filtro=1&view='+view+'&precioMin='+precioMin+'&precioMax='+precioMax+'&oroItaly='+oroItaly+'&oroNacional='+oroNacional+'&ordenar='+ordenar;
+        window.location.href=url+'index.php?pagina='+pagina+'&filtros=1&view='+view+'&precioMin='+precioMin+'&precioMax='+precioMax+'&oroItaly='+oroItaly+'&oroNacional='+oroNacional+'&ordenar='+ordenar;
     }
 
 </script>

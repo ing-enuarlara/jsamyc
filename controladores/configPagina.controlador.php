@@ -1,22 +1,22 @@
 <?php
     class ControladorConfigPagina{
 
-        static public function ctrConfigPagina($idInsti=2){
-                $datosConfigPagina=ModeloConfigPagina::mdlConfiguracionPagina($idInsti);
+        static public function ctrConfigPagina(){
+                $datosConfigPagina=ModeloConfigPagina::mdlConfiguracionPagina();
                 
                 return $datosConfigPagina;
                 exit();
         }
 
-        static public function ctrColorPagina($idInsti=2){
-                $configuracionColor=ModeloConfigPagina::mdlColorPagina($idInsti);
+        static public function ctrColorPagina(){
+                $configuracionColor=ModeloConfigPagina::mdlColorPagina();
                 
                 return $configuracionColor;
                 exit();
         }
 
-        static public function ctrListarLegales($idInsti=2){
-                $consultaLegales=ModeloConfigPagina::mdlListarLegales($idInsti);
+        static public function ctrListarLegales(){
+                $consultaLegales=ModeloConfigPagina::mdlListarLegales();
                 
                 return $consultaLegales;
                 exit();

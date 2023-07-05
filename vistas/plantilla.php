@@ -41,7 +41,7 @@
         include(RUTA_PROYECTO."vistas/includes/funciones-js.php");
     ?>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
