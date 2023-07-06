@@ -43,7 +43,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        MÁS JOYAS
+                        MÁS PRODUCTOS
                         <i id="plusMj" class="fa-solid fa-plus"></i>
                     </a>
                     <ul id="menuMj">

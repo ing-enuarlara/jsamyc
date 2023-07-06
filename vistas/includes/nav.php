@@ -40,7 +40,7 @@
                         </ul>
                     </li>
                     <li class="grid__item grid__item-prod">
-                        <a href="#" class="grid__link"><b>MÁS JOYAS</b></a>
+                        <a href="#" class="grid__link"><b>MÁS PRODUCTOS</b></a>
                         <ul class="sublink">
                             <?php
                                 $consultaSubCategorias = ControladorComercial::ctrSubCategoriasMasJoyas();

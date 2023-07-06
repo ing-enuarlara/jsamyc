@@ -47,14 +47,14 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
     <div class="sec-ttl centrar-texto">
         <h3 class="h3 ft1">
             <span class="dbi pr">
-                <strong>JOYAS EN ORO 18K</strong>
+                <strong>PRODUCTO DE CALIDAD</strong>
             </span>
         </h3>
-        <p>Solo te traemos el mejor Oro 18K garantizado en diseños exclusivos.</p>
+        <p>Solo te traemos el mejor producto garantizado en diseños exclusivos.</p>
     </div>
     <div class="tabs-listing wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
         <ul class="collection-tabs small--hide centrar-texto">
-            <li class="style3" id="catr1">
+            <li class="style3 active" id="catr1">
                 <a class="tablink" href="#collection-1552394502461-0">CADENAS</a>
             </li>
             <li class="style3" id="catr2">
@@ -65,7 +65,7 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
             </li>
         </ul>
         <div class="tab-container">
-            <h3 class="acor-ttl medium-up--hide text-center style3">
+            <h3 class="acor-ttl medium-up--hide text-center style3 active">
                 <a class="tablink" href="#collection-1552394502461-0">CADENAS<i class="ad ad-angle-down-r" aria-hidden="true"></i></a>
             </h3>
             <div class="contenedor_producto">
@@ -143,10 +143,10 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
     <div class="sec-ttl centrar-texto">
         <h3 class="h3 ft1">
             <span class="dbi pr">
-                <strong>RECIÉN LLEGADOS A ÉLITE</strong>
+                <strong>RECIÉN LLEGADOS </strong>
             </span>
         </h3>
-        <p>Estas son las últimas prendas de joyería en Oro de 18K llegadas a nuestra tienda.</p>
+        <p>Estas son las últimas prendas llegadas a nuestra tienda.</p>
     </div>
     <div class="contenedor_producto">
         <div id="" class="grid grid-products carousel slick-initialized slick-slider">
@@ -211,7 +211,7 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
     <div class="sec-ttl centrar-texto">
         <h3 class="h3 ft1">
             <span class="dbi pr">
-                <strong>JOYAS MÁS VENDIDAS</strong>
+                <strong>MÁS VISTAS</strong>
             </span>
         </h3>
         <p>Estas son las piezas que están marcando tendencia, no te quedes sin la tuya!</p>
@@ -486,7 +486,7 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
                 <div class="text fl1">
                     <h5>CALIDAD GARANTIZADA</h5>
                     <span class="sub-text">
-                        <p>JOYAS SOLO EN ORO 18K</p>
+                        <!-- <p></p> -->
                     </span>
                 </div>
             </a>
