@@ -7,10 +7,11 @@ const RUTA_ADMIN = 'http://localhost/ing-enuarlara.co/admin/';
 
 $offset = $_REQUEST["offset"];
 $filtro = $_REQUEST["filtro"];
+$filtroOrden = $_REQUEST["filtroOrden"];
 
 // Obtener los siguientes 30 productos de la base de datos
 $limit="LIMIT $offset,12";
-$consultaProductos = ControladorComercial::ctrProductos($filtro,$limit);
+$consultaProductos = ControladorComercial::ctrProductos($filtro,$limit,$filtroOrden);
 while($datosProductos = mysqli_fetch_array($consultaProductos, MYSQLI_BOTH)){
     $filtroFotos =' AND cpf_principal=1';
     $consultaFotosProductos = ControladorComercial::ctrFotosProductos($datosProductos['cprod_id'],$filtroFotos);

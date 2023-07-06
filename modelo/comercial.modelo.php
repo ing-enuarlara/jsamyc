@@ -61,8 +61,8 @@
             exit();
         }
 
-        static public function mdlProductos($filtro,$limit){
-            $consultaProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos WHERE cprod_id_empresa=2 AND cprod_estado=1 $filtro ORDER BY cprod_id $limit");
+        static public function mdlProductos($filtro,$limit,$filtroOrden){
+            $consultaProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos WHERE cprod_id_empresa=2 AND cprod_estado=1 $filtro $filtroOrden $limit");
 
             return $consultaProductos;
             exit();
@@ -72,6 +72,13 @@
             $consultaFotosProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos_fotos WHERE cpf_id_producto=$idProd $filtroFotos ORDER BY cpf_id $limit");
 
             return $consultaFotosProductos;
+            exit();
+        }
+
+        static public function mdlTipos($filtro){
+            $consultaTipos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_tipo_productos WHERE ctipo_id_empresa=2 AND ctipo_estado=1 $filtro");
+
+            return $consultaTipos;
             exit();
         }
     }

@@ -25,23 +25,38 @@
         $precioMax=$_GET['precioMax'];
         $filtro.=" AND cprod_costo<=$precioMax";
     }
-    $oroItaly="";
-    if(!empty($_GET['oroItaly'])){
-        $oroItaly=$_GET['oroItaly'];
-        $filtro.=" AND cprod_tipo=1";
-    }
-    $oroNacional="";
-    if(!empty($_GET['oroNacional'])){
-        $oroNacional=$_GET['oroNacional'];
-        $filtro.=" AND cprod_tipo=2";
+    $tipo="";
+    if(!empty($_GET['tipo'])){
+        $tipo=$_GET['tipo'];
+        $filtro.=" AND cprod_tipo=$tipo";
     }
     $ordenar="";
+    $filtroOrden="";
     if(!empty($_GET['ordenar'])){
         $ordenar=$_GET['ordenar'];
-        $filtro.="";
+        switch($ordenar){
+            case 1:
+                $filtroOrden="ORDER BY cprod_nombre ASC";
+            break;
+            case 2:
+                $filtroOrden="ORDER BY cprod_nombre DESC";
+            break;
+            case 3:
+                $filtroOrden="ORDER BY cprod_costo ASC";
+            break;
+            case 4:
+                $filtroOrden="ORDER BY cprod_costo DESC";
+            break;
+            case 5:
+                $filtroOrden="ORDER BY cprod_fecha_creacion ASC";
+            break;
+            case 6:
+                $filtroOrden="ORDER BY cprod_fecha_creacion DESC";
+            break;
+        }
     }
     $limit='LIMIT 0,2000';
-    $consultaProductos = ControladorComercial::ctrProductos($filtro,$limit);
+    $consultaProductos = ControladorComercial::ctrProductos($filtro,$limit,$filtroOrden);
     $numProductos=mysqli_num_rows($consultaProductos);
 ?>
 <script>
@@ -53,11 +68,16 @@
         <?php }else{ ?>
         var filtro = ''; // filtros
         <?php }?>
+        <?php if(!empty($filtroOrden)){ ?>
+        var filtroOrden = '<?=$filtroOrden?>'; // filtroOrdens
+        <?php }else{ ?>
+        var filtroOrden = ''; // filtroOrdens
+        <?php }?>
 
         $.ajax({
             type: "POST",
             url: "<?=RUTA?>vistas/ajax/ajax-obtener-productos.php",
-            data: { offset: offset, filtro: filtro },
+            data: { offset: offset, filtro: filtro, filtroOrden: filtroOrden },
             success: function(response) {
                 // Agregar los nuevos productos a la lista
                 $("#contenedorProductos").append(response);
@@ -74,7 +94,7 @@
                 $.ajax({
                     type: "POST",
                     url: "<?=RUTA?>vistas/ajax/ajax-obtener-productos.php",
-                    data: { offset: offset, filtro: filtro },
+                    data: { offset: offset, filtro: filtro, filtroOrden: filtroOrden },
                     success: function(response) {
                         // Agregar los nuevos productos a la lista
                         $("#contenedorProductos").append(response);
@@ -107,12 +127,14 @@
                             <span class="fl f-jcsb f-aic">Tipo de producto<span class="count-bubble"></span></span>
                         </div>
                         <ul class="widget-content flOpt" role="list">
-                            <li>
-                                <a onclick="filtros('',5)">Oro Italy</a>
-                            </li>
-                            <li>
-                                <a onclick="filtros('',6)">Oro Nacional</a>
-                            </li>
+                            <?php
+                                $consultaTipos = ControladorComercial::ctrTipos();
+                                while($datosTipos = mysqli_fetch_array($consultaTipos, MYSQLI_BOTH)){
+                            ?>
+                                <li>
+                                    <a onclick="filtros(<?=$datosTipos['ctipo_id'];?>,5)"><?=$datosTipos['ctipo_nombre'];?></a>
+                                </li>
+                            <?php }?>
                         </ul>
                     </div>
                 </form>
@@ -159,15 +181,14 @@
                 </div>
                 <div class="filters-toolbar__item text-right">
                     <label for="SortBySt" class="label--hidden">Ordenar</label>
-                    <select name="SortBy" id="SortBySt" class="filters-toolbar__input filters-toolbar__input--sort" onchange="filtros(this,7)">
-                        <option value="1" <?php if($ordenar==1){ echo "selected";} ?> >Destacados</option>
-                        <option value="2" <?php if($ordenar==2){ echo "selected";} ?> >Más vendidos</option>
-                        <option value="3" <?php if($ordenar==3){ echo "selected";} ?> >Alfabéticamente, A-Z</option>
-                        <option value="4" <?php if($ordenar==4){ echo "selected";} ?> >Alfabéticamente, Z-A</option>
-                        <option value="5" <?php if($ordenar==5){ echo "selected";} ?> >Precio, menor a mayor</option>
-                        <option value="6" <?php if($ordenar==6){ echo "selected";} ?> >Precio, mayor a menor</option>
-                        <option value="7" <?php if($ordenar==7){ echo "selected";} ?> >Fecha, nuevo a antiguo</option>
-                        <option value="8" <?php if($ordenar==8){ echo "selected";} ?> >Fecha, antiguo a nuevo</option>
+                    <select name="SortBy" id="SortBySt" class="filters-toolbar__input filters-toolbar__input--sort" onchange="filtros(this,6)">
+                        <option value="">Ordenar</option>
+                        <option value="1" <?php if($ordenar==1){ echo "selected";} ?> >Alfabéticamente, A-Z</option>
+                        <option value="2" <?php if($ordenar==2){ echo "selected";} ?> >Alfabéticamente, Z-A</option>
+                        <option value="3" <?php if($ordenar==3){ echo "selected";} ?> >Precio, menor a mayor</option>
+                        <option value="4" <?php if($ordenar==4){ echo "selected";} ?> >Precio, mayor a menor</option>
+                        <option value="5" <?php if($ordenar==5){ echo "selected";} ?> >Fecha, nuevo a antiguo</option>
+                        <option value="6" <?php if($ordenar==6){ echo "selected";} ?> >Fecha, antiguo a nuevo</option>
                     </select>
                 </div>
             </div>
@@ -178,22 +199,20 @@
                 }
                 if(!empty($precioMin)){
                 ?>
-                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtros=1&view=<?=$_GET['view']?>&precioMax=<?=$precioMax?>&oroItaly=<?=$oroItaly?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>">Minimo: $<?=$precioMin?> <i class="fa-solid fa-xmark"></i></a>
+                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtros=1&view=<?=$_GET['view']?>&precioMax=<?=$precioMax?>&tipo=<?=$tipo?>&ordenar=<?=$ordenar?>">Minimo: $<?=$precioMin?> <i class="fa-solid fa-xmark"></i></a>
                 <?php
                 }
                 if(!empty($precioMax)){
                 ?>
-                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtros=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&oroItaly=<?=$oroItaly?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>">Maximo: $<?=$precioMax?> <i class="fa-solid fa-xmark"></i></a>
+                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtros=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&tipo=<?=$tipo?>&ordenar=<?=$ordenar?>">Maximo: $<?=$precioMax?> <i class="fa-solid fa-xmark"></i></a>
                 <?php
                 }
-                if(!empty($oroItaly)){
+                if(!empty($tipo)){
+                    $filtroTipo=" AND ctipo_id=$tipo";
+                    $consultaTiposFiltros = ControladorComercial::ctrTipos($filtroTipo);
+                    $datosTiposFiltros = mysqli_fetch_array($consultaTiposFiltros, MYSQLI_BOTH);
                 ?>
-                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtros=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&precioMax=<?=$precioMax?>&oroNacional=<?=$oroNacional?>&ordenar=<?=$ordenar?>"><?=$oroItaly?> <i class="fa-solid fa-xmark"></i></a>
-                <?php
-                }
-                if(!empty($oroNacional)){
-                ?>
-                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtros=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&precioMax=<?=$precioMax?>&oroItaly=<?=$oroItaly?>&ordenar=<?=$ordenar?>"><?=$oroNacional?> <i class="fa-solid fa-xmark"></i></a>
+                    <a class="actFilter js-facet-remove" href="<?=RUTA?>index.php?pagina=<?=$_GET['pagina']?>&filtros=1&view=<?=$_GET['view']?>&precioMin=<?=$precioMin?>&precioMax=<?=$precioMax?>&ordenar=<?=$ordenar?>"><?=$datosTiposFiltros['ctipo_nombre']?> <i class="fa-solid fa-xmark"></i></a>
                 <?php
                 }
                 ?>

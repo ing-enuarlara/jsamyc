@@ -13,17 +13,13 @@
     if(!empty($_GET['precioMax'])){
         $max=$_GET['precioMax'];
     }
-    $oroI="";
-    if(!empty($_GET['oroItaly'])){
-        $oroI=$_GET['oroItaly'];
+    $tipo="";
+    if(!empty($_GET['tipo'])){
+        $tipo=$_GET['tipo'];
     }
-    $oroN="";
-    if(!empty($_GET['oroNacional'])){
-        $oroN=$_GET['oroNacional'];
-    }
-    $orden="";
+    $ordenar="";
     if(!empty($_GET['ordenar'])){
-        $orden=$_GET['ordenar'];
+        $ordenar=$_GET['ordenar'];
     }
 ?>
 <script type="text/javascript">
@@ -33,9 +29,8 @@
         view= "<?=$view;?>";
         precioMin= "<?=$min?>";
         precioMax= "<?=$max?>";
-        oroItaly="<?=$oroI?>";
-        oroNacional="<?=$oroN?>";
-        ordenar="<?=$orden?>";
+        tipo="<?=$tipo?>";
+        ordenar="<?=$ordenar?>";
         if(op==1){
             view="grid";
         }
@@ -49,15 +44,12 @@
             precioMax=datos.value;
         }
         if(op==5){
-            oroItaly="oro-italy";
+            tipo=datos;
         }
         if(op==6){
-            oroNacional="oro-nacional";
-        }
-        if(op==7){
             ordenar=datos.value;
         }
-        window.location.href=url+'index.php?pagina='+pagina+'&filtros=1&view='+view+'&precioMin='+precioMin+'&precioMax='+precioMax+'&oroItaly='+oroItaly+'&oroNacional='+oroNacional+'&ordenar='+ordenar;
+        window.location.href=url+'index.php?pagina='+pagina+'&filtros=1&view='+view+'&precioMin='+precioMin+'&precioMax='+precioMax+'&tipo='+tipo+'&ordenar='+ordenar;
     }
 
 </script>
