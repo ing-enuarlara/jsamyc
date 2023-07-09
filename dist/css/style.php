@@ -1071,7 +1071,7 @@ ul.menucate li ul {
     border-radius: 30px;
 }
 .collection-tabs a:hover, .collection-tabs a:focus, .collection-tabs .active a {
-    color: #fff;
+    color: #fff !important;
     opacity: 1;
     border-color: #0000;
     background-color: #111;
@@ -1358,7 +1358,7 @@ a.grid-view-item__link {
 }
 .home-instagram .followus .btnCard {
     position: relative;
-    z-index: 555;
+    /*z-index: 555;*/
 }
 .store-info {
     display: flex;
@@ -1626,7 +1626,7 @@ option {
     gap: .5rem;
     place-items: center;
 }
-.contenedor_producto{
+.contenedor_producto, .contenedor_producto_destacados{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: .5rem;

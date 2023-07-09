@@ -18,8 +18,8 @@
             exit();
         }
 
-        static public function mdlCategoriasDestacado(){
-            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa=2 AND ccat_menu=1");
+        static public function mdlCategoriasDestacado($limit){
+            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa=2 AND ccat_menu=1 $limit");
 
             return $consultaCategorias;
             exit();

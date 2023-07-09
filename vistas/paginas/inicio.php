@@ -47,76 +47,151 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
     <div class="sec-ttl centrar-texto">
         <h3 class="h3 ft1">
             <span class="dbi pr">
-                <strong>PRODUCTO DE CALIDAD</strong>
+                <strong>PRODUCTOS DESTACADOS</strong>
             </span>
         </h3>
         <p>Solo te traemos el mejor producto garantizado en diseños exclusivos.</p>
     </div>
+    <script>
+        var itemsH3 = document.getElementsByClassName("style3");
+        var itemsLi = document.getElementsByClassName("style3");
+        
+        function toggleActive(element, elementType) {
+            // Oculta los productos del elemento activo actual
+            var elementosProductos = document.getElementsByClassName("contenedor_producto_destacados");
+            
+            for (var i = 0; i < elementosProductos.length; i++) {
+                elementosProductos[i].style.display = "none";
+            }
+
+            // Quita la clase 'active' de todos los elementos
+            var items = (elementType === "h3") ? itemsH3 : itemsLi;
+            for (var i = 0; i < items.length; i++) {
+                var item = items[i];
+
+                item.classList.remove("active");
+
+                if (item === element.parentNode) {
+                    // Muestra los productos del elemento al que se hizo clic
+                    var target = element.parentNode.getAttribute("data-target");
+                    var contenedorProducto = document.getElementById(target);
+                    contenedorProducto.style.display = "block";
+
+                    // Agrega la clase 'active' al elemento seleccionado
+                    item.classList.add("active");
+                }
+            }
+        }
+
+        for (var i = 0; i < itemsH3.length; i++) {
+            itemsH3[i].addEventListener("click", function() {
+                toggleActive(this, "h3");
+            });
+        }
+
+        for (var i = 0; i < itemsLi.length; i++) {
+            itemsLi[i].addEventListener("click", function() {
+                toggleActive(this, "li");
+            });
+        }
+    </script>
     <div class="tabs-listing wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
         <ul class="collection-tabs small--hide centrar-texto">
-            <li class="style3 active" id="catr1">
-                <a class="tablink" href="#collection-1552394502461-0">CADENAS</a>
-            </li>
-            <li class="style3" id="catr2">
-                <a class="tablink" href="#collection-1552394502461-1">AROS</a>
-            </li>
-            <li class="style3" id="catr3">
-                <a class="tablink" href="#collection-1552394502461-2">ARETES</a>
-            </li>
+            <?php
+                $limit="LIMIT 0,8";
+                $limitCat='LIMIT 0,3';
+                $primerElemento = true;
+                $consultaCategorias = ControladorComercial::ctrCategoriasDestacado($limitCat);
+                while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
+                    $claseActiva = $primerElemento ? 'active' : '';
+                    $display = $primerElemento ? 'block' : 'none';
+                    $primerElemento = false;
+            ?>
+                <li class="style3 <?=$claseActiva?>" id="catrLI" data-target="contenedorProducto<?=$datosCategorias['ccat_id'];?>">
+                    <a class="tablink" onclick="toggleActive(this, 'li')"><?=strtoupper($datosCategorias['ccat_nombre'])?></a>
+                </li>
+            <?php }?>
         </ul>
         <div class="tab-container">
-            <h3 class="acor-ttl medium-up--hide text-center style3 active">
-                <a class="tablink" href="#collection-1552394502461-0">CADENAS<i class="ad ad-angle-down-r" aria-hidden="true"></i></a>
-            </h3>
-            <div class="contenedor_producto">
-                <div id="" class="grid grid-products carousel slick-initialized slick-slider">
-                    <div class="slick-list draggable">
-                        <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                            <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
-                                <div class="grid-view_image">
-                                    <a class="grid-view-item__link" href="<?=RUTA?>productos">
-                                        <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
-                                            <picture style="display: block;">
-                                                <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
-                                            </picture>
+            <?php
+                $primerElemento = true;
+                $consultaCategorias = ControladorComercial::ctrCategoriasDestacado($limitCat);
+                while($datosCategorias = mysqli_fetch_array($consultaCategorias, MYSQLI_BOTH)){
+                    $claseActiva = $primerElemento ? 'active' : '';
+                    $display = $primerElemento ? 'block' : 'none';
+                    $primerElemento = false;
+                    $filtro=" AND cprod_categoria='".$datosCategorias['ccat_id']."'";
+                    $consultaProductos = ControladorComercial::ctrProductos($filtro,$limit);
+                    $numProductos=mysqli_num_rows($consultaProductos);
+            ?>
+                <h3 class="acor-ttl medium-up--hide text-center style3 <?=$claseActiva?>" id="catrH3" data-target="contenedorProducto<?=$datosCategorias['ccat_id'];?>">
+                    <a class="tablink" onclick="toggleActive(this, 'h3')">
+                        <?=strtoupper($datosCategorias['ccat_nombre'])?>
+                    </a>
+                </h3>
+                <div class="contenedor_producto_destacados slider-container" data-slick='{"autoplay": true, "autoplaySpeed": 3000}' id="contenedorProducto<?=$datosCategorias['ccat_id'];?>" style="display: <?=$display?>;">
+                    <?php
+                    if($numProductos>0){
+                        while($datosProductos = mysqli_fetch_array($consultaProductos, MYSQLI_BOTH)){
+                            $filtroFotos =' AND cpf_principal=1';
+                            $consultaFotosProductos = ControladorComercial::ctrFotosProductos($datosProductos['cprod_id'],$filtroFotos);
+                            $datosFotosProductos = mysqli_fetch_array($consultaFotosProductos, MYSQLI_BOTH);
+                            $numFotosProductos=mysqli_num_rows($consultaFotosProductos);
+                            $rutaImg='https://via.placeholder.com/550';
+                            if($numFotosProductos>0){
+                                $rutaImg=RUTA_ADMIN.'files/productos/'.$datosFotosProductos['cpf_fotos'];
+                            }
+                    ?>
+                        <div id="" class="grid grid-products carousel">
+                            <div class="draggable">
+                                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                                    <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
+                                        <div class="grid-view_image">
+                                            <a class="grid-view-item__link" href="<?=RUTA.'productos/'.$datosProductos['cprod_id']?>">
+                                                <div class="grid-view-item__image primary lazyloaded" style="background-image: url(<?=$rutaImg?>);">
+                                                    <picture style="display: block;">
+                                                        <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div class="button-set">
+                                                <a class="btn btn_tienda add-to-cart" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path
+                                                            d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                                    </svg>
+                                                </a>
+                                                <a class="btn btn_tienda add-to-cart" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                        <circle cx="10" cy="10" r="7" />
+                                                        <line x1="7" y1="10" x2="13" y2="10" />
+                                                        <line x1="10" y1="7" x2="10" y2="13" />
+                                                        <line x1="21" y1="21" x2="15" y2="15" />
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </a>
-                                    <div class="button-set">
-                                        <a class="btn btn_tienda add-to-cart" href="#">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                <path
-                                                    d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                            </svg>
-                                        </a>
-                                        <a class="btn btn_tienda add-to-cart" href="#">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <circle cx="10" cy="10" r="7" />
-                                                <line x1="7" y1="10" x2="13" y2="10" />
-                                                <line x1="10" y1="7" x2="10" y2="13" />
-                                                <line x1="21" y1="21" x2="15" y2="15" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
-                                    <div class="grid-view-item__meta">
-                                        <!-- Show min to max price -->
-                                        <span class="visually-hidden">Precio habitual</span>
-                                        <span class="product-price__price">$520.960</span>
-                                    </div>
-                                    <div class="flatbtn">
-                                        <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
+                                        <div class="details">
+                                            <a href="<?=RUTA.'productos/'.$datosProductos['cprod_id']?>" class="grid-view-item__title" tabindex="0"><?=$datosProductos['cprod_nombre']?></a>
+                                            <div class="grid-view-item__meta">
+                                                <!-- Show min to max price -->
+                                                <span class="visually-hidden">Precio habitual</span>
+                                                <span class="product-price__price">$<?=number_format($datosProductos['cprod_costo'],0,",",".")?></span>
+                                            </div>
+                                            <div class="flatbtn">
+                                                <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <?php }}?>
                 </div>
-            </div>
+            <?php }?>
         </div>
     </div>
 </div>
@@ -148,54 +223,69 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
         </h3>
         <p>Estas son las últimas prendas llegadas a nuestra tienda.</p>
     </div>
-    <div class="contenedor_producto">
-        <div id="" class="grid grid-products carousel slick-initialized slick-slider">
-            <div class="slick-list draggable">
-                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                    <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
-                        <div class="grid-view_image">
-                            <a class="grid-view-item__link" href="<?=RUTA?>productos">
-                                <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
-                                    <picture style="display: block;">
-                                        <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
-                                    </picture>
+    <div class="contenedor_producto slider-container" data-slick='{"autoplay": true, "autoplaySpeed": 3000}'>
+        <?php
+            $filtro="";
+            $orden="ORDER BY cprod_fecha_creacion DESC";
+            $consultaProductos = ControladorComercial::ctrProductos($filtro,$limit,$orden);
+            while($datosProductos = mysqli_fetch_array($consultaProductos, MYSQLI_BOTH)){
+                $filtroFotos =' AND cpf_principal=1';
+                $consultaFotosProductos = ControladorComercial::ctrFotosProductos($datosProductos['cprod_id'],$filtroFotos);
+                $datosFotosProductos = mysqli_fetch_array($consultaFotosProductos, MYSQLI_BOTH);
+                $numFotosProductos=mysqli_num_rows($consultaFotosProductos);
+                $rutaImg='https://via.placeholder.com/550';
+                if($numFotosProductos>0){
+                    $rutaImg=RUTA_ADMIN.'files/productos/'.$datosFotosProductos['cpf_fotos'];
+                }
+        ?>
+            <div id="" class="grid grid-products carousel">
+                <div class="draggable">
+                    <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                        <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
+                            <div class="grid-view_image">
+                                <a class="grid-view-item__link" href="<?=RUTA.'productos/'.$datosProductos['cprod_id']?>">
+                                    <div class="grid-view-item__image primary lazyloaded" style="background-image: url(<?=$rutaImg?>);">
+                                        <picture style="display: block;">
+                                            <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
+                                        </picture>
+                                    </div>
+                                </a>
+                                <div class="button-set">
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="7" y1="10" x2="13" y2="10" />
+                                            <line x1="10" y1="7" x2="10" y2="13" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg>
+                                    </a>
                                 </div>
-                            </a>
-                            <div class="button-set">
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <circle cx="10" cy="10" r="7" />
-                                        <line x1="7" y1="10" x2="13" y2="10" />
-                                        <line x1="10" y1="7" x2="10" y2="13" />
-                                        <line x1="21" y1="21" x2="15" y2="15" />
-                                    </svg>
-                                </a>
                             </div>
-                        </div>
-                        <div class="details">
-                            <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
-                            <div class="grid-view-item__meta">
-                                <!-- Show min to max price -->
-                                <span class="visually-hidden">Precio habitual</span>
-                                <span class="product-price__price">$520.960</span>
-                            </div>
-                            <div class="flatbtn">
-                                <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
+                            <div class="details">
+                                <a href="<?=RUTA.'productos/'.$datosProductos['cprod_id']?>" class="grid-view-item__title" tabindex="0"><?=$datosProductos['cprod_nombre']?></a>
+                                <div class="grid-view-item__meta">
+                                    <!-- Show min to max price -->
+                                    <span class="visually-hidden">Precio habitual</span>
+                                    <span class="product-price__price">$<?=number_format($datosProductos['cprod_costo'],0,",",".")?></span>
+                                </div>
+                                <div class="flatbtn">
+                                    <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php }?>
     </div>
 </div>
 <div class="page-width">
@@ -216,242 +306,69 @@ if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider
         </h3>
         <p>Estas son las piezas que están marcando tendencia, no te quedes sin la tuya!</p>
     </div>
-    <div class="contenedor_producto">
-        <div id="" class="grid grid-products carousel slick-initialized slick-slider">
-            <div class="slick-list draggable">
-                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                    <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
-                        <div class="grid-view_image">
-                            <a class="grid-view-item__link" href="<?=RUTA?>productos">
-                                <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
-                                    <picture style="display: block;">
-                                        <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
-                                    </picture>
+    <div class="contenedor_producto slider-container" data-slick='{"autoplay": true, "autoplaySpeed": 3000}'>
+        <?php
+            $filtro="";
+            $orden="ORDER BY cprod_vistas DESC";
+            $consultaProductos = ControladorComercial::ctrProductos($filtro,$limit,$orden);
+            while($datosProductos = mysqli_fetch_array($consultaProductos, MYSQLI_BOTH)){
+                $filtroFotos =' AND cpf_principal=1';
+                $consultaFotosProductos = ControladorComercial::ctrFotosProductos($datosProductos['cprod_id'],$filtroFotos);
+                $datosFotosProductos = mysqli_fetch_array($consultaFotosProductos, MYSQLI_BOTH);
+                $numFotosProductos=mysqli_num_rows($consultaFotosProductos);
+                $rutaImg='https://via.placeholder.com/550';
+                if($numFotosProductos>0){
+                    $rutaImg=RUTA_ADMIN.'files/productos/'.$datosFotosProductos['cpf_fotos'];
+                }
+        ?>
+            <div id="" class="grid grid-products carousel">
+                <div class="draggable">
+                    <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                        <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
+                            <div class="grid-view_image">
+                                <a class="grid-view-item__link" href="<?=RUTA.'productos/'.$datosProductos['cprod_id']?>">
+                                    <div class="grid-view-item__image primary lazyloaded" style="background-image: url(<?=$rutaImg?>);">
+                                        <picture style="display: block;">
+                                            <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
+                                        </picture>
+                                    </div>
+                                </a>
+                                <div class="button-set">
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn_tienda add-to-cart" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="7" y1="10" x2="13" y2="10" />
+                                            <line x1="10" y1="7" x2="10" y2="13" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg>
+                                    </a>
                                 </div>
-                            </a>
-                            <div class="button-set">
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <circle cx="10" cy="10" r="7" />
-                                        <line x1="7" y1="10" x2="13" y2="10" />
-                                        <line x1="10" y1="7" x2="10" y2="13" />
-                                        <line x1="21" y1="21" x2="15" y2="15" />
-                                    </svg>
-                                </a>
                             </div>
-                        </div>
-                        <div class="details">
-                            <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
-                            <div class="grid-view-item__meta">
-                                <!-- Show min to max price -->
-                                <span class="visually-hidden">Precio habitual</span>
-                                <span class="product-price__price">$520.960</span>
-                            </div>
-                            <div class="flatbtn">
-                                <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
+                            <div class="details">
+                                <a href="<?=RUTA.'productos/'.$datosProductos['cprod_id']?>" class="grid-view-item__title" tabindex="0"><?=$datosProductos['cprod_nombre']?></a>
+                                <div class="grid-view-item__meta">
+                                    <!-- Show min to max price -->
+                                    <span class="visually-hidden">Precio habitual</span>
+                                    <span class="product-price__price">$<?=number_format($datosProductos['cprod_costo'],0,",",".")?></span>
+                                </div>
+                                <div class="flatbtn">
+                                    <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="" class="grid grid-products carousel slick-initialized slick-slider">
-            <div class="slick-list draggable">
-                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                    <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
-                        <div class="grid-view_image">
-                            <a class="grid-view-item__link" href="<?=RUTA?>productos">
-                                <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
-                                    <picture style="display: block;">
-                                        <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
-                                    </picture>
-                                </div>
-                            </a>
-                            <div class="button-set">
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <circle cx="10" cy="10" r="7" />
-                                        <line x1="7" y1="10" x2="13" y2="10" />
-                                        <line x1="10" y1="7" x2="10" y2="13" />
-                                        <line x1="21" y1="21" x2="15" y2="15" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
-                            <div class="grid-view-item__meta">
-                                <!-- Show min to max price -->
-                                <span class="visually-hidden">Precio habitual</span>
-                                <span class="product-price__price">$520.960</span>
-                            </div>
-                            <div class="flatbtn">
-                                <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="" class="grid grid-products carousel slick-initialized slick-slider">
-            <div class="slick-list draggable">
-                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                    <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
-                        <div class="grid-view_image">
-                            <a class="grid-view-item__link" href="<?=RUTA?>productos">
-                                <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
-                                    <picture style="display: block;">
-                                        <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
-                                    </picture>
-                                </div>
-                            </a>
-                            <div class="button-set">
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <circle cx="10" cy="10" r="7" />
-                                        <line x1="7" y1="10" x2="13" y2="10" />
-                                        <line x1="10" y1="7" x2="10" y2="13" />
-                                        <line x1="21" y1="21" x2="15" y2="15" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
-                            <div class="grid-view-item__meta">
-                                <!-- Show min to max price -->
-                                <span class="visually-hidden">Precio habitual</span>
-                                <span class="product-price__price">$520.960</span>
-                            </div>
-                            <div class="flatbtn">
-                                <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="" class="grid grid-products carousel slick-initialized slick-slider">
-            <div class="slick-list draggable">
-                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                    <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
-                        <div class="grid-view_image">
-                            <a class="grid-view-item__link" href="<?=RUTA?>productos">
-                                <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
-                                    <picture style="display: block;">
-                                        <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
-                                    </picture>
-                                </div>
-                            </a>
-                            <div class="button-set">
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <circle cx="10" cy="10" r="7" />
-                                        <line x1="7" y1="10" x2="13" y2="10" />
-                                        <line x1="10" y1="7" x2="10" y2="13" />
-                                        <line x1="21" y1="21" x2="15" y2="15" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
-                            <div class="grid-view-item__meta">
-                                <!-- Show min to max price -->
-                                <span class="visually-hidden">Precio habitual</span>
-                                <span class="product-price__price">$520.960</span>
-                            </div>
-                            <div class="flatbtn">
-                                <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="" class="grid grid-products carousel slick-initialized slick-slider">
-            <div class="slick-list draggable">
-                <div class="grid__item grid__item-prod item small--one-half medium--one-quarter large--one-quarter widescreen--one-fifth slick-slide slick-current slick-active" style="width: 248px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                    <div class="grid-view-item style5 wow fadeIn" data-wow-delay="0ms" style="visibility: visible; animation-delay: 0ms; animation-name: fadeIn;">
-                        <div class="grid-view_image">
-                            <a class="grid-view-item__link" href="<?=RUTA?>productos">
-                                <div class="grid-view-item__image primary lazyloaded" style="background-image: url(https://via.placeholder.com/550);">
-                                    <picture style="display: block;">
-                                        <img alt="" class="lazyautosizes lazyloaded ls-is-cached" data-sizes="auto" data-parent-fit="cover" sizes="233px">
-                                    </picture>
-                                </div>
-                            </a>
-                            <div class="button-set">
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn_tienda add-to-cart" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <circle cx="10" cy="10" r="7" />
-                                        <line x1="7" y1="10" x2="13" y2="10" />
-                                        <line x1="10" y1="7" x2="10" y2="13" />
-                                        <line x1="21" y1="21" x2="15" y2="15" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <a href="<?=RUTA?>productos" class="grid-view-item__title" tabindex="0">Producto de Prueba</a>
-                            <div class="grid-view-item__meta">
-                                <!-- Show min to max price -->
-                                <span class="visually-hidden">Precio habitual</span>
-                                <span class="product-price__price">$520.960</span>
-                            </div>
-                            <div class="flatbtn">
-                                <a class="btnCard btnCard__primary add-to-cart" href="#">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php }?>
     </div>
 </div>
 <div class="page-width home-instagram">

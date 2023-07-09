@@ -15,8 +15,8 @@
                 exit();
         }
 
-        static public function ctrCategoriasDestacado(){
-                $consultaCategorias=ModeloComercial::mdlCategoriasDestacado();
+        static public function ctrCategoriasDestacado(string $limit=''){
+                $consultaCategorias=ModeloComercial::mdlCategoriasDestacado($limit);
                 
                 return $consultaCategorias;
                 exit();

@@ -48,10 +48,10 @@
                 $filtroOrden="ORDER BY cprod_costo DESC";
             break;
             case 5:
-                $filtroOrden="ORDER BY cprod_fecha_creacion ASC";
+                $filtroOrden="ORDER BY cprod_fecha_creacion DESC";
             break;
             case 6:
-                $filtroOrden="ORDER BY cprod_fecha_creacion DESC";
+                $filtroOrden="ORDER BY cprod_fecha_creacion ASC";
             break;
         }
     }

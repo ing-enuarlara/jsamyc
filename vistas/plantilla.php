@@ -22,8 +22,11 @@
     <link rel="stylesheet" type="text/css" href="<?=RUTA?>dist/css/responsive.css">
 
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Agrega estos enlaces en el head de tu HTML -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     <!-- FONTAWESOME -->
     <link href="<?=RUTA?>dist/fontawesome/css/all.css" rel="stylesheet">
@@ -42,6 +45,45 @@
     ?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Espera a que se cargue el documento
+        document.addEventListener("DOMContentLoaded", function() {
+            // Inicializa el slider utilizando la clase del contenedor
+            $(".slider-container").slick({
+            // Configuraciones opcionales del slider
+            slidesToShow: 5, // Número de elementos mostrados por slide
+            slidesToScroll: 1, // Número de elementos desplazados por vez
+            responsive: [
+                {
+                    breakpoint: 1160, // Punto de quiebre para reducir el número de elementos mostrados en dispositivos móviles
+                    settings: {
+                        slidesToShow: 4 // Cambia a mostrar un elemento por slide en dispositivos móviles
+                    }
+                },
+                {
+                    breakpoint: 1024, // Punto de quiebre para reducir el número de elementos mostrados en dispositivos móviles
+                    settings: {
+                        slidesToShow: 3 // Cambia a mostrar un elemento por slide en dispositivos móviles
+                    }
+                },
+                {
+                    breakpoint: 770, // Punto de quiebre para reducir el número de elementos mostrados en dispositivos móviles
+                    settings: {
+                        slidesToShow: 2 // Cambia a mostrar un elemento por slide en dispositivos móviles
+                    }
+                },
+                {
+                    breakpoint: 527, // Punto de quiebre para reducir el número de elementos mostrados en dispositivos móviles
+                    settings: {
+                        slidesToShow: 1 // Cambia a mostrar un elemento por slide en dispositivos móviles
+                    }
+                }
+            ],
+            prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
+            nextArrow: '<button type="button" class="slick-next">Siguiente</button>'
+            });
+        });
+    </script>
 
 </head>
 
@@ -82,6 +124,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+    <!-- Agrega este script al final del body de tu HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 

@@ -45,10 +45,10 @@
 
                     <p><a href="<?= RUTA ?>vistas/clientes/" class="btnSetting btnCard">Mi cuenta</a> </p>
                     <p class="text-center"><a href="/customer_identity/logout" class="logout ctLink"><b>Cerrar sesión</b></a> </p>
-                    <p class="text-center large-up--hide"><a href="/pages/lista-de-deseos" class="wishlist ctLink" title="Lista de deseos">Lista de deseos</a></p>
+                    <p class="text-center large-up--hide"><a href="<?=RUTA?>deseos" class="wishlist ctLink" title="Lista de deseos">Lista de deseos</a></p>
                 </div>
             </div>
-            <a href="deseos" class="opciones__link opcion__wishlist">
+            <a href="<?=RUTA?>deseos" class="opciones__link opcion__wishlist">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
