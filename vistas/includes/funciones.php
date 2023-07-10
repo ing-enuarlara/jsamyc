@@ -41,6 +41,11 @@
                         $datosCategorias = ControladorComercial::ctrDatosCategorias($pagina[1]);
                         $nombrePagina=$datosCategorias['ccat_nombre'];
                     }
+
+                    if($pagina[0]=='productos'){
+                        $datosProductos = ControladorComercial::ctrDatosProductos($pagina[1]);
+                        $nombrePagina=$datosProductos['cprod_nombre'];
+                    }
                 }
             }
             if(!empty($pagina[2])){

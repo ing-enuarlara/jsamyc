@@ -68,8 +68,16 @@
             exit();
         }
 
-        static public function mdlFotosProductos($idProd,$filtroFotos,$limit){
-            $consultaFotosProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos_fotos WHERE cpf_id_producto=$idProd $filtroFotos ORDER BY cpf_id $limit");
+        static public function mdlDatosProductos($idProducto){
+            $consultaProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos WHERE cprod_id=$idProducto");
+            $datosProductos = mysqli_fetch_array($consultaProductos, MYSQLI_BOTH);
+
+            return $datosProductos;
+            exit();
+        }
+
+        static public function mdlFotosProductos($idProd,$filtroFotos,$limit,$orden){
+            $consultaFotosProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos_fotos WHERE cpf_id_producto=$idProd $filtroFotos $orden $limit");
 
             return $consultaFotosProductos;
             exit();

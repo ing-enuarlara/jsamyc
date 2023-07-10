@@ -64,8 +64,15 @@
                 exit();
         }
 
-        static public function ctrFotosProductos($idProd,$filtroFotos='',$limit=''){
-                $consultaFotosProductos=ModeloComercial::mdlFotosProductos($idProd,$filtroFotos,$limit);
+        static public function ctrDatosProductos($idProducto){
+                $datosProductos=ModeloComercial::mdlDatosProductos($idProducto);
+                
+                return $datosProductos;
+                exit();
+        }
+
+        static public function ctrFotosProductos($idProd,$filtroFotos='',$limit='',$orden='ORDER BY cpf_id'){
+                $consultaFotosProductos=ModeloComercial::mdlFotosProductos($idProd,$filtroFotos,$limit,$orden);
                 
                 return $consultaFotosProductos;
                 exit();
