@@ -1,7 +1,7 @@
 <?php
     header("Content-Type: text/css; charset: UTF-8");
     require_once "../../modelo/conexion.php";
-    $consultaConfigColor=Conexion::conexionBdPaginaWeb()->query("SELECT * FROM general_color_store WHERE gcs_id_empresa=2");
+    $consultaConfigColor=Conexion::conexionBdPaginaWeb()->query("SELECT * FROM general_color_store WHERE gcs_id_empresa='".Conexion::$idEmpresa."'");
     $configuracionColor = mysqli_fetch_array($consultaConfigColor, MYSQLI_BOTH);
 ?>
 :root {

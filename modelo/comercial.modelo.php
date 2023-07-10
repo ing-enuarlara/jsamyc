@@ -4,7 +4,7 @@
     class ModeloComercial{
 
         static public function mdlCategorias(){
-            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa=2");
+            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa='".Conexion::$idEmpresa."'");
 
             return $consultaCategorias;
             exit();
@@ -19,14 +19,14 @@
         }
 
         static public function mdlCategoriasDestacado($limit){
-            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa=2 AND ccat_menu=1 $limit");
+            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa='".Conexion::$idEmpresa."' AND ccat_menu=1 $limit");
 
             return $consultaCategorias;
             exit();
         }
 
         static public function mdlCategoriasFooter(){
-            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa=2 AND ccat_footer=1");
+            $consultaCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_categorias WHERE ccat_id_empresa='".Conexion::$idEmpresa."' AND ccat_footer=1");
 
             return $consultaCategorias;
             exit();
@@ -48,21 +48,21 @@
         }
 
         static public function mdlSubCategoriasExclusivas(){
-            $consultaSubCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_marcas WHERE cmar_id_empresa=2 AND cmar_menu=1");
+            $consultaSubCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_marcas WHERE cmar_id_empresa='".Conexion::$idEmpresa."' AND cmar_menu=1");
 
             return $consultaSubCategorias;
             exit();
         }
 
         static public function mdlSubCategoriasMasJoyas(){
-            $consultaSubCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_marcas WHERE cmar_id_empresa=2 AND cmar_mas_joyas=1");
+            $consultaSubCategorias=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_marcas WHERE cmar_id_empresa='".Conexion::$idEmpresa."' AND cmar_mas_joyas=1");
 
             return $consultaSubCategorias;
             exit();
         }
 
         static public function mdlProductos($filtro,$limit,$filtroOrden){
-            $consultaProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos WHERE cprod_id_empresa=2 AND cprod_estado=1 $filtro $filtroOrden $limit");
+            $consultaProductos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_productos WHERE cprod_id_empresa='".Conexion::$idEmpresa."' AND cprod_estado=1 $filtro $filtroOrden $limit");
 
             return $consultaProductos;
             exit();
@@ -84,7 +84,7 @@
         }
 
         static public function mdlTipos($filtro){
-            $consultaTipos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_tipo_productos WHERE ctipo_id_empresa=2 AND ctipo_estado=1 $filtro");
+            $consultaTipos=Conexion::conexionBdComercial()->query("SELECT * FROM comercial_tipo_productos WHERE ctipo_id_empresa='".Conexion::$idEmpresa."' AND ctipo_estado=1 $filtro");
 
             return $consultaTipos;
             exit();
