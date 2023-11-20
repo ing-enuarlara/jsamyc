@@ -1,6 +1,6 @@
 <?php
 include(RUTA_PROYECTO."vistas/includes/configPagina.php");
-if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider'])) {
+if (!empty($configuracion['conf_slider1']) || !empty($configuracion['conf_slider2'])) {
 ?>
 <div class="ism-slider" data-transition_type="fade" data-play_type="loop" data-interval="10000" data-buttons="false" id="my-slider">
     <ol>

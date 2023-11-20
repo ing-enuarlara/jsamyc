@@ -1,6 +1,6 @@
 <?php
     const RUTA = 'http://localhost/ing-enuarlara.co/jsamyc/';
-    const RUTA_PROYECTO = 'C:/xampp/htdocs/ing-enuarlara.co/jsamyc/';
+    const RUTA_PROYECTO = 'Z:/xampp/htdocs/ing-enuarlara.co/jsamyc/';
 
     require_once RUTA_PROYECTO."controladores/configPagina.controlador.php";
     require_once RUTA_PROYECTO."modelo/configPagina.modelo.php";
