@@ -40,12 +40,14 @@
             </a>
             <div id="settingsBox">
                 <div class="customer-links">
+                    <?php if (empty($_SESSION['idCliente'])) { ?>
                     <p><a href="<?= RUTA ?>acceso" class="btnSetting btnCard">ACCESO</a></p>
-                    <p class="centrar-texto">¿Nuevo usuario?<a href="<?= RUTA ?>registrate" class="ctLink">Regístrate ahora</a></p>
-
+                    <p class="centrar-texto">¿Nuevo usuario? <a href="<?= RUTA ?>registrate" class="ctLink">Regístrate ahora</a></p>
+                    <?php } else { ?>
                     <p><a href="<?= RUTA ?>vistas/clientes/" class="btnSetting btnCard">Mi cuenta</a> </p>
                     <p class="text-center"><a href="/customer_identity/logout" class="logout ctLink"><b>Cerrar sesión</b></a> </p>
                     <p class="text-center large-up--hide"><a href="<?=RUTA?>deseos" class="wishlist ctLink" title="Lista de deseos">Lista de deseos</a></p>
+                    <?php } ?>
                 </div>
             </div>
             <a href="<?=RUTA?>deseos" class="opciones__link opcion__wishlist">

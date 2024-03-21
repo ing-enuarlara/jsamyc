@@ -97,7 +97,7 @@
     <div class="footer-bottom">
         <div class="flex page-width ">
             <div class="aling-left small--text-center">
-                © 2023 <?=$configuracion['conf_empresa'];?> - Todos los derechos reservados | Desarrollado por <a href="https://ing-enuarlara.netlify.app/" target="_blank">@ing_enuarlara.co</a>
+                © 2023 <?=$configuracion['conf_empresa'];?> - Todos los derechos reservados | Desarrollado por <a href="https://ing-enuarlara.netlify.app/" target="_blank">@enuar_lara7®™</a>
             </div>
             <div class="paymentCall aling-right small--text-center">
                 <p class="footer-img">
